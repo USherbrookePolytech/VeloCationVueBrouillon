@@ -59,9 +59,10 @@ public class Accueil
     private void initialize()
     {
         frmAcceuil = new JFrame();
+        frmAcceuil.setResizable(false);
         frmAcceuil.getContentPane().setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 17));
         frmAcceuil.setTitle("Accueil");
-        frmAcceuil.setBounds(100, 100, 555, 466);
+        frmAcceuil.setBounds(100, 100, 555, 221);
         frmAcceuil.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         GridBagLayout gridBagLayout = new GridBagLayout();
         gridBagLayout.columnWidths = new int[]{60, 218, 218, 60, 0};
@@ -116,6 +117,22 @@ public class Accueil
         gbc_btnAfficherCarte.gridx = 1;
         gbc_btnAfficherCarte.gridy = 4;
         frmAcceuil.getContentPane().add(btnAfficherCarte, gbc_btnAfficherCarte);
+        
+        JButton btnAide = new JButton("Aide");
+        GridBagConstraints gbc_btnAide = new GridBagConstraints();
+        gbc_btnAide.fill = GridBagConstraints.HORIZONTAL;
+        gbc_btnAide.insets = new Insets(0, 0, 0, 5);
+        gbc_btnAide.gridx = 1;
+        gbc_btnAide.gridy = 5;
+        frmAcceuil.getContentPane().add(btnAide, gbc_btnAide);
+        
+        JButton btnContacterLassistance = new JButton("Contacter l'assistance");
+        GridBagConstraints gbc_btnContacterLassistance = new GridBagConstraints();
+        gbc_btnContacterLassistance.fill = GridBagConstraints.HORIZONTAL;
+        gbc_btnContacterLassistance.insets = new Insets(0, 0, 0, 5);
+        gbc_btnContacterLassistance.gridx = 2;
+        gbc_btnContacterLassistance.gridy = 5;
+        frmAcceuil.getContentPane().add(btnContacterLassistance, gbc_btnContacterLassistance);
     }
 
 }
