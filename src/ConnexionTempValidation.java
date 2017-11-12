@@ -10,14 +10,6 @@ import java.awt.Color;
 import javax.swing.JTextField;
 import javax.swing.LayoutStyle.ComponentPlacement;
 
-/**
- * 
- */
-
-/**
- * @author Bebo
- *
- */
 public class ConnexionTempValidation
 {
 

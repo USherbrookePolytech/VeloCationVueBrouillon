@@ -10,14 +10,6 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.Color;
 
-/**
- * 
- */
-
-/**
- * @author Bebo
- *
- */
 public class ConnexionTempNum
 {
 
