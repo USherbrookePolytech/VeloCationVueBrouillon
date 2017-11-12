@@ -5,20 +5,9 @@ import javax.swing.JPanel;
 import java.awt.BorderLayout;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
-import javax.swing.ImageIcon;
 import javax.swing.border.TitledBorder;
-import javax.swing.JLabel;
-import java.awt.Color;
 import javax.swing.JButton;
 
-/**
- * 
- */
-
-/**
- * @author Bebo
- *
- */
 public class Paiement
 {
 

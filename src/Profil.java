@@ -18,14 +18,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
 
-/**
- * 
- */
-
-/**
- * @author Bebo
- *
- */
 public class Profil
 {
 
@@ -119,7 +111,7 @@ public class Profil
         
         JButton ProfilBtnLouer = new JButton("Louer");
         
-        JLabel ProfilLblMesLocationsCours = new JLabel("Mes locations en cours :");
+        JLabel ProfilLblMesLocationsCours = new JLabel("Historique de mes locations :");
         ProfilLblMesLocationsCours.setFont(new Font("Tahoma", Font.BOLD, 11));
         
         JScrollPane ProfilScrollPaneLocation = new JScrollPane();
@@ -129,14 +121,14 @@ public class Profil
                 .addGroup(gl_ProfilPanelLocation.createSequentialGroup()
                     .addGroup(gl_ProfilPanelLocation.createParallelGroup(Alignment.LEADING)
                         .addGroup(gl_ProfilPanelLocation.createSequentialGroup()
-                            .addGap(197)
-                            .addComponent(ProfilLblMesLocationsCours))
-                        .addGroup(gl_ProfilPanelLocation.createSequentialGroup()
                             .addContainerGap()
                             .addComponent(ProfilScrollPaneLocation, GroupLayout.DEFAULT_SIZE, 489, Short.MAX_VALUE))
                         .addGroup(gl_ProfilPanelLocation.createSequentialGroup()
                             .addGap(225)
-                            .addComponent(ProfilBtnLouer)))
+                            .addComponent(ProfilBtnLouer))
+                        .addGroup(gl_ProfilPanelLocation.createSequentialGroup()
+                            .addGap(173)
+                            .addComponent(ProfilLblMesLocationsCours)))
                     .addContainerGap())
         );
         gl_ProfilPanelLocation.setVerticalGroup(
@@ -148,23 +140,29 @@ public class Profil
                     .addComponent(ProfilScrollPaneLocation, GroupLayout.PREFERRED_SIZE, 96, GroupLayout.PREFERRED_SIZE)
                     .addGap(18)
                     .addComponent(ProfilBtnLouer)
-                    .addContainerGap(88, Short.MAX_VALUE))
+                    .addContainerGap(13, Short.MAX_VALUE))
         );
         
         ProfilTableLocation = new JTable();
         ProfilTableLocation.setModel(new DefaultTableModel(
             new Object[][] {
-                {new Integer(2), "10/11/2017 11:05:23", "11/11/2017 11:00:00"},
+                {new Integer(2), "10/11/2017 11:05:23", "11/11/2017 11:00:00", Boolean.TRUE},
             },
             new String[] {
-                "Qte.", "Date emprunt", "Date limite retour"
+                "Qte.", "Date emprunt", "Date limite retour", "Rendu"
             }
         ) {
             Class[] columnTypes = new Class[] {
-                Integer.class, Object.class, Object.class
+                Integer.class, Object.class, Object.class, Boolean.class
             };
             public Class getColumnClass(int columnIndex) {
                 return columnTypes[columnIndex];
+            }
+            boolean[] columnEditables = new boolean[] {
+                true, true, true, false
+            };
+            public boolean isCellEditable(int row, int column) {
+                return columnEditables[column];
             }
         });
         ProfilTableLocation.getColumnModel().getColumn(0).setResizable(false);
@@ -172,6 +170,7 @@ public class Profil
         ProfilTableLocation.getColumnModel().getColumn(0).setMinWidth(4);
         ProfilTableLocation.getColumnModel().getColumn(1).setPreferredWidth(120);
         ProfilTableLocation.getColumnModel().getColumn(2).setPreferredWidth(120);
+        ProfilTableLocation.getColumnModel().getColumn(3).setResizable(false);
         ProfilScrollPaneLocation.setViewportView(ProfilTableLocation);
         ProfilPanelLocation.setLayout(gl_ProfilPanelLocation);
         

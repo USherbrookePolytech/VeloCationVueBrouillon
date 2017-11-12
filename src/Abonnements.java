@@ -6,7 +6,6 @@ import javax.swing.GroupLayout.Alignment;
 import javax.swing.JPanel;
 import javax.swing.border.TitledBorder;
 import javax.swing.border.BevelBorder;
-import javax.swing.JTextPane;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JButton;
@@ -15,14 +14,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
 
-/**
- * 
- */
-
-/**
- * @author Bebo
- *
- */
 public class Abonnements
 {
 
