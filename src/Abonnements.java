@@ -69,12 +69,12 @@ public class Abonnements
         frmAbonnement.setBounds(100, 100, 555, 429);
         frmAbonnement.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
-        JPanel panelAbonnements = new JPanel();
-        panelAbonnements.setBorder(new TitledBorder(null, "Choisissez votre abonnement", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+        JPanel AbonnementsPanel = new JPanel();
+        AbonnementsPanel.setBorder(new TitledBorder(null, "Choisissez votre abonnement", TitledBorder.LEADING, TitledBorder.TOP, null, null));
         
-        JButton btnAnnulerLinscription = new JButton("Annuler l'inscription");
+        JButton AbonnementsBtnAnnulerLinscription = new JButton("Annuler l'inscription");
         
-        JButton btnRetour = new JButton("Retour");
+        JButton AbonnementsBtnRetour = new JButton("Retour");
         GroupLayout groupLayout = new GroupLayout(frmAbonnement.getContentPane());
         groupLayout.setHorizontalGroup(
             groupLayout.createParallelGroup(Alignment.LEADING)
@@ -82,23 +82,23 @@ public class Abonnements
                     .addContainerGap()
                     .addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
                         .addGroup(groupLayout.createSequentialGroup()
-                            .addComponent(panelAbonnements, GroupLayout.DEFAULT_SIZE, 529, Short.MAX_VALUE)
+                            .addComponent(AbonnementsPanel, GroupLayout.DEFAULT_SIZE, 529, Short.MAX_VALUE)
                             .addContainerGap())
                         .addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
-                            .addComponent(btnRetour)
+                            .addComponent(AbonnementsBtnRetour)
                             .addGap(84)
-                            .addComponent(btnAnnulerLinscription)
+                            .addComponent(AbonnementsBtnAnnulerLinscription)
                             .addGap(124))))
         );
         groupLayout.setVerticalGroup(
             groupLayout.createParallelGroup(Alignment.LEADING)
                 .addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(panelAbonnements, GroupLayout.DEFAULT_SIZE, 349, Short.MAX_VALUE)
+                    .addComponent(AbonnementsPanel, GroupLayout.DEFAULT_SIZE, 349, Short.MAX_VALUE)
                     .addPreferredGap(ComponentPlacement.RELATED)
                     .addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
-                        .addComponent(btnRetour)
-                        .addComponent(btnAnnulerLinscription))
+                        .addComponent(AbonnementsBtnRetour)
+                        .addComponent(AbonnementsBtnAnnulerLinscription))
                     .addContainerGap())
         );
         
@@ -177,21 +177,21 @@ public class Abonnements
         
         JButton btnAide = new JButton("Aide");
         btnAide.setBackground(new Color(255, 51, 255));
-        GroupLayout gl_panelAbonnements = new GroupLayout(panelAbonnements);
-        gl_panelAbonnements.setHorizontalGroup(
-            gl_panelAbonnements.createParallelGroup(Alignment.LEADING)
-                .addGroup(gl_panelAbonnements.createSequentialGroup()
+        GroupLayout gl_AbonnementsPanel = new GroupLayout(AbonnementsPanel);
+        gl_AbonnementsPanel.setHorizontalGroup(
+            gl_AbonnementsPanel.createParallelGroup(Alignment.LEADING)
+                .addGroup(gl_AbonnementsPanel.createSequentialGroup()
                     .addContainerGap()
-                    .addGroup(gl_panelAbonnements.createParallelGroup(Alignment.LEADING)
+                    .addGroup(gl_AbonnementsPanel.createParallelGroup(Alignment.LEADING)
                         .addComponent(panel1An, GroupLayout.DEFAULT_SIZE, 497, Short.MAX_VALUE)
                         .addComponent(panelAbo3, GroupLayout.DEFAULT_SIZE, 496, Short.MAX_VALUE)
                         .addComponent(panelAbo1, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnAide, Alignment.TRAILING))
                     .addContainerGap())
         );
-        gl_panelAbonnements.setVerticalGroup(
-            gl_panelAbonnements.createParallelGroup(Alignment.LEADING)
-                .addGroup(Alignment.TRAILING, gl_panelAbonnements.createSequentialGroup()
+        gl_AbonnementsPanel.setVerticalGroup(
+            gl_AbonnementsPanel.createParallelGroup(Alignment.LEADING)
+                .addGroup(Alignment.TRAILING, gl_AbonnementsPanel.createSequentialGroup()
                     .addComponent(btnAide)
                     .addPreferredGap(ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
                     .addComponent(panelAbo1, GroupLayout.PREFERRED_SIZE, 89, GroupLayout.PREFERRED_SIZE)
@@ -237,7 +237,7 @@ public class Abonnements
                     .addContainerGap())
         );
         panelAbo1.setLayout(gl_panelAbo1);
-        panelAbonnements.setLayout(gl_panelAbonnements);
+        AbonnementsPanel.setLayout(gl_AbonnementsPanel);
         frmAbonnement.getContentPane().setLayout(groupLayout);
     }
 }

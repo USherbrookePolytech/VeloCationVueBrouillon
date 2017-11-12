@@ -34,7 +34,7 @@ public class CreationCompte
     private JTextField txtPrenom;
     private JLabel lblDateDeNaissance;
     private JDateChooser dateChooser;
-    private JPanel panel_1;
+    private JPanel CreationPanelAdresse;
     private JTextField txtNumero;
     private JLabel lblVoie;
     private JTextField txtVoie;
@@ -89,19 +89,19 @@ public class CreationCompte
         frmInscription.setBounds(100, 100, 392, 342);
         frmInscription.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
-        JPanel panel = new JPanel();
-        panel.setBorder(new TitledBorder(null, "Qui \u00EAtes-vous ?", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+        JPanel CreationPanelVous = new JPanel();
+        CreationPanelVous.setBorder(new TitledBorder(null, "Qui \u00EAtes-vous ?", TitledBorder.LEADING, TitledBorder.TOP, null, null));
         
-        panel_1 = new JPanel();
-        panel_1.setBorder(new TitledBorder(null, "Votre adresse principale", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+        CreationPanelAdresse = new JPanel();
+        CreationPanelAdresse.setBorder(new TitledBorder(null, "Votre adresse principale", TitledBorder.LEADING, TitledBorder.TOP, null, null));
         
-        JButton btnReinitialiser = new JButton("Réinitialiser");
-        btnReinitialiser.addActionListener(new ActionListener() {
+        JButton CreationBtnReinitialiser = new JButton("Réinitialiser");
+        CreationBtnReinitialiser.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
             }
         });
         
-        JButton btnValider = new JButton("Valider");
+        JButton CreationBtnValider = new JButton("Valider");
         GroupLayout groupLayout = new GroupLayout(frmInscription.getContentPane());
         groupLayout.setHorizontalGroup(
             groupLayout.createParallelGroup(Alignment.TRAILING)
@@ -110,26 +110,26 @@ public class CreationCompte
                         .addGroup(groupLayout.createSequentialGroup()
                             .addContainerGap()
                             .addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
-                                .addComponent(panel_1, GroupLayout.PREFERRED_SIZE, 363, GroupLayout.PREFERRED_SIZE)
-                                .addComponent(panel, GroupLayout.DEFAULT_SIZE, 366, Short.MAX_VALUE)))
+                                .addComponent(CreationPanelAdresse, GroupLayout.PREFERRED_SIZE, 363, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(CreationPanelVous, GroupLayout.DEFAULT_SIZE, 366, Short.MAX_VALUE)))
                         .addGroup(groupLayout.createSequentialGroup()
                             .addGap(94)
-                            .addComponent(btnReinitialiser)
+                            .addComponent(CreationBtnReinitialiser)
                             .addGap(41)
-                            .addComponent(btnValider)))
+                            .addComponent(CreationBtnValider)))
                     .addContainerGap())
         );
         groupLayout.setVerticalGroup(
             groupLayout.createParallelGroup(Alignment.LEADING)
                 .addGroup(groupLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(panel, GroupLayout.PREFERRED_SIZE, 110, GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CreationPanelVous, GroupLayout.PREFERRED_SIZE, 110, GroupLayout.PREFERRED_SIZE)
                     .addPreferredGap(ComponentPlacement.RELATED)
-                    .addComponent(panel_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CreationPanelAdresse, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                     .addPreferredGap(ComponentPlacement.RELATED)
                     .addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
-                        .addComponent(btnReinitialiser)
-                        .addComponent(btnValider))
+                        .addComponent(CreationBtnReinitialiser)
+                        .addComponent(CreationBtnValider))
                     .addContainerGap(26, Short.MAX_VALUE))
         );
         
@@ -162,62 +162,62 @@ public class CreationCompte
         txtVille.setColumns(10);
         
         lblexSherbrooke = new JLabel("(ex : Sherbrooke)");
-        GroupLayout gl_panel_1 = new GroupLayout(panel_1);
-        gl_panel_1.setHorizontalGroup(
-            gl_panel_1.createParallelGroup(Alignment.TRAILING)
-                .addGroup(gl_panel_1.createSequentialGroup()
+        GroupLayout gl_CreationPanelAdresse = new GroupLayout(CreationPanelAdresse);
+        gl_CreationPanelAdresse.setHorizontalGroup(
+            gl_CreationPanelAdresse.createParallelGroup(Alignment.TRAILING)
+                .addGroup(gl_CreationPanelAdresse.createSequentialGroup()
                     .addGap(57)
-                    .addGroup(gl_panel_1.createParallelGroup(Alignment.TRAILING)
+                    .addGroup(gl_CreationPanelAdresse.createParallelGroup(Alignment.TRAILING)
                         .addComponent(lblCodePostal)
                         .addComponent(lblVille)
                         .addComponent(lblVoie)
                         .addComponent(lblNumero, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE))
                     .addPreferredGap(ComponentPlacement.RELATED)
-                    .addGroup(gl_panel_1.createParallelGroup(Alignment.LEADING)
-                        .addGroup(gl_panel_1.createSequentialGroup()
+                    .addGroup(gl_CreationPanelAdresse.createParallelGroup(Alignment.LEADING)
+                        .addGroup(gl_CreationPanelAdresse.createSequentialGroup()
                             .addComponent(txtNumero, GroupLayout.PREFERRED_SIZE, 55, GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(ComponentPlacement.RELATED)
                             .addComponent(lblExVoie))
-                        .addGroup(gl_panel_1.createSequentialGroup()
+                        .addGroup(gl_CreationPanelAdresse.createSequentialGroup()
                             .addComponent(txtVoie, GroupLayout.PREFERRED_SIZE, 105, GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(ComponentPlacement.RELATED)
                             .addComponent(lblexRue))
-                        .addGroup(gl_panel_1.createSequentialGroup()
+                        .addGroup(gl_CreationPanelAdresse.createSequentialGroup()
                             .addComponent(txtCodepostal, GroupLayout.PREFERRED_SIZE, 56, GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(ComponentPlacement.RELATED)
                             .addComponent(lblexJhw))
-                        .addGroup(gl_panel_1.createSequentialGroup()
+                        .addGroup(gl_CreationPanelAdresse.createSequentialGroup()
                             .addComponent(txtVille, GroupLayout.PREFERRED_SIZE, 105, GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(ComponentPlacement.RELATED)
                             .addComponent(lblexSherbrooke)))
                     .addGap(26))
         );
-        gl_panel_1.setVerticalGroup(
-            gl_panel_1.createParallelGroup(Alignment.LEADING)
-                .addGroup(gl_panel_1.createSequentialGroup()
+        gl_CreationPanelAdresse.setVerticalGroup(
+            gl_CreationPanelAdresse.createParallelGroup(Alignment.LEADING)
+                .addGroup(gl_CreationPanelAdresse.createSequentialGroup()
                     .addContainerGap()
-                    .addGroup(gl_panel_1.createParallelGroup(Alignment.BASELINE)
+                    .addGroup(gl_CreationPanelAdresse.createParallelGroup(Alignment.BASELINE)
                         .addComponent(txtNumero, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                         .addComponent(lblNumero, GroupLayout.PREFERRED_SIZE, 17, GroupLayout.PREFERRED_SIZE)
                         .addComponent(lblExVoie))
                     .addPreferredGap(ComponentPlacement.RELATED)
-                    .addGroup(gl_panel_1.createParallelGroup(Alignment.BASELINE)
+                    .addGroup(gl_CreationPanelAdresse.createParallelGroup(Alignment.BASELINE)
                         .addComponent(txtVoie, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                         .addComponent(lblVoie)
                         .addComponent(lblexRue))
                     .addPreferredGap(ComponentPlacement.RELATED)
-                    .addGroup(gl_panel_1.createParallelGroup(Alignment.BASELINE)
+                    .addGroup(gl_CreationPanelAdresse.createParallelGroup(Alignment.BASELINE)
                         .addComponent(lblCodePostal)
                         .addComponent(txtCodepostal, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                         .addComponent(lblexJhw))
                     .addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(gl_panel_1.createParallelGroup(Alignment.BASELINE)
+                    .addGroup(gl_CreationPanelAdresse.createParallelGroup(Alignment.BASELINE)
                         .addComponent(lblVille)
                         .addComponent(txtVille, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                         .addComponent(lblexSherbrooke))
                     .addContainerGap())
         );
-        panel_1.setLayout(gl_panel_1);
+        CreationPanelAdresse.setLayout(gl_CreationPanelAdresse);
         
         txtNom = new JTextField();
         txtNom.setColumns(10);
@@ -235,22 +235,22 @@ public class CreationCompte
         lblDateDeNaissance = new JLabel("Date de naissance :");
         
         lblexDateNaissance = new JLabel("(ex : 31/12/1996)");
-        GroupLayout gl_panel = new GroupLayout(panel);
-        gl_panel.setHorizontalGroup(
-            gl_panel.createParallelGroup(Alignment.LEADING)
-                .addGroup(gl_panel.createSequentialGroup()
+        GroupLayout gl_CreationPanelVous = new GroupLayout(CreationPanelVous);
+        gl_CreationPanelVous.setHorizontalGroup(
+            gl_CreationPanelVous.createParallelGroup(Alignment.LEADING)
+                .addGroup(gl_CreationPanelVous.createSequentialGroup()
                     .addContainerGap()
-                    .addGroup(gl_panel.createParallelGroup(Alignment.TRAILING, false)
-                        .addGroup(gl_panel.createSequentialGroup()
+                    .addGroup(gl_CreationPanelVous.createParallelGroup(Alignment.TRAILING, false)
+                        .addGroup(gl_CreationPanelVous.createSequentialGroup()
                             .addComponent(lblDateDeNaissance)
                             .addGap(5)
                             .addComponent(dateChooser, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGroup(gl_panel.createSequentialGroup()
+                        .addGroup(gl_CreationPanelVous.createSequentialGroup()
                             .addGap(52)
                             .addComponent(lblPrenom)
                             .addGap(5)
                             .addComponent(txtPrenom))
-                        .addGroup(gl_panel.createSequentialGroup()
+                        .addGroup(gl_CreationPanelVous.createSequentialGroup()
                             .addGap(67)
                             .addComponent(lblNom)
                             .addGap(5)
@@ -259,35 +259,35 @@ public class CreationCompte
                     .addComponent(lblexDateNaissance)
                     .addContainerGap(67, Short.MAX_VALUE))
         );
-        gl_panel.setVerticalGroup(
-            gl_panel.createParallelGroup(Alignment.LEADING)
-                .addGroup(gl_panel.createSequentialGroup()
-                    .addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
-                        .addGroup(gl_panel.createSequentialGroup()
+        gl_CreationPanelVous.setVerticalGroup(
+            gl_CreationPanelVous.createParallelGroup(Alignment.LEADING)
+                .addGroup(gl_CreationPanelVous.createSequentialGroup()
+                    .addGroup(gl_CreationPanelVous.createParallelGroup(Alignment.LEADING)
+                        .addGroup(gl_CreationPanelVous.createSequentialGroup()
                             .addContainerGap()
                             .addComponent(lblNom))
-                        .addGroup(gl_panel.createSequentialGroup()
+                        .addGroup(gl_CreationPanelVous.createSequentialGroup()
                             .addGap(1)
                             .addComponent(txtNom, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
-                        .addGroup(gl_panel.createSequentialGroup()
+                    .addGroup(gl_CreationPanelVous.createParallelGroup(Alignment.LEADING)
+                        .addGroup(gl_CreationPanelVous.createSequentialGroup()
                             .addGap(9)
                             .addComponent(lblPrenom))
-                        .addGroup(gl_panel.createSequentialGroup()
+                        .addGroup(gl_CreationPanelVous.createSequentialGroup()
                             .addPreferredGap(ComponentPlacement.RELATED)
                             .addComponent(txtPrenom, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
-                        .addGroup(gl_panel.createSequentialGroup()
+                    .addGroup(gl_CreationPanelVous.createParallelGroup(Alignment.LEADING)
+                        .addGroup(gl_CreationPanelVous.createSequentialGroup()
                             .addGap(9)
                             .addComponent(lblDateDeNaissance))
-                        .addGroup(gl_panel.createSequentialGroup()
+                        .addGroup(gl_CreationPanelVous.createSequentialGroup()
                             .addPreferredGap(ComponentPlacement.RELATED)
-                            .addGroup(gl_panel.createParallelGroup(Alignment.TRAILING)
+                            .addGroup(gl_CreationPanelVous.createParallelGroup(Alignment.TRAILING)
                                 .addComponent(lblexDateNaissance)
                                 .addComponent(dateChooser, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))))
                     .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        panel.setLayout(gl_panel);
+        CreationPanelVous.setLayout(gl_CreationPanelVous);
         frmInscription.getContentPane().setLayout(groupLayout);
     }
 }
