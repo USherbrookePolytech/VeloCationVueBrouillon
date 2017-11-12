@@ -287,5 +287,4 @@ public class CreationCompte
         CreationPanelVous.setLayout(gl_CreationPanelVous);
         frmInscription.getContentPane().setLayout(groupLayout);
     }
-    }
 }
