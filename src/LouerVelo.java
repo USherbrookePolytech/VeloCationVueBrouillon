@@ -77,6 +77,10 @@ public class LouerVelo
         
         JButton LouerBtnAnnuler = new JButton("Annuler");
         LouerBtnAnnuler.setBackground(new Color(255, 0, 0));
+        
+        JLabel LouerLblCaution = new JLabel("Note : Caution de 200$ CAN par vélo");
+        LouerLblCaution.setFont(new Font("Tahoma", Font.BOLD, 11));
+        LouerLblCaution.setForeground(new Color(102, 0, 0));
         GroupLayout gl_LouerPanel = new GroupLayout(LouerPanel);
         gl_LouerPanel.setHorizontalGroup(
             gl_LouerPanel.createParallelGroup(Alignment.LEADING)
@@ -84,21 +88,25 @@ public class LouerVelo
                     .addContainerGap()
                     .addGroup(gl_LouerPanel.createParallelGroup(Alignment.LEADING)
                         .addGroup(gl_LouerPanel.createSequentialGroup()
-                            .addGroup(gl_LouerPanel.createParallelGroup(Alignment.LEADING)
-                                .addGroup(Alignment.TRAILING, gl_LouerPanel.createSequentialGroup()
-                                    .addComponent(LouerLblVotreLocationSera)
-                                    .addPreferredGap(ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
-                                    .addComponent(LouerBtnAide, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE))
-                                .addGroup(gl_LouerPanel.createParallelGroup(Alignment.TRAILING)
-                                    .addComponent(LouerBtnAnnuler)
-                                    .addGroup(gl_LouerPanel.createSequentialGroup()
-                                        .addComponent(LouerLblNombreDeVlo)
-                                        .addPreferredGap(ComponentPlacement.RELATED)
-                                        .addComponent(LouerSpinnerVelo, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(LouerLblVotreLocationSera)
+                            .addPreferredGap(ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
+                            .addComponent(LouerBtnAide, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE)
                             .addContainerGap())
                         .addGroup(Alignment.TRAILING, gl_LouerPanel.createSequentialGroup()
+                            .addComponent(LouerBtnAnnuler)
+                            .addPreferredGap(ComponentPlacement.UNRELATED)
                             .addComponent(LouerBtnValider)
-                            .addGap(123))))
+                            .addGap(133))))
+                .addGroup(gl_LouerPanel.createSequentialGroup()
+                    .addGap(49)
+                    .addComponent(LouerLblNombreDeVlo)
+                    .addPreferredGap(ComponentPlacement.UNRELATED)
+                    .addComponent(LouerSpinnerVelo, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(197, Short.MAX_VALUE))
+                .addGroup(Alignment.TRAILING, gl_LouerPanel.createSequentialGroup()
+                    .addContainerGap(234, Short.MAX_VALUE)
+                    .addComponent(LouerLblCaution)
+                    .addContainerGap())
         );
         gl_LouerPanel.setVerticalGroup(
             gl_LouerPanel.createParallelGroup(Alignment.LEADING)
@@ -108,15 +116,17 @@ public class LouerVelo
                         .addGroup(gl_LouerPanel.createSequentialGroup()
                             .addGap(21)
                             .addComponent(LouerLblVotreLocationSera)))
-                    .addGap(28)
+                    .addPreferredGap(ComponentPlacement.UNRELATED)
                     .addGroup(gl_LouerPanel.createParallelGroup(Alignment.BASELINE)
                         .addComponent(LouerLblNombreDeVlo)
                         .addComponent(LouerSpinnerVelo, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                    .addGap(18)
+                    .addGap(10)
+                    .addComponent(LouerLblCaution)
+                    .addPreferredGap(ComponentPlacement.UNRELATED)
                     .addGroup(gl_LouerPanel.createParallelGroup(Alignment.BASELINE)
-                        .addComponent(LouerBtnValider)
-                        .addComponent(LouerBtnAnnuler))
-                    .addContainerGap(111, Short.MAX_VALUE))
+                        .addComponent(LouerBtnAnnuler)
+                        .addComponent(LouerBtnValider))
+                    .addContainerGap())
         );
         LouerPanel.setLayout(gl_LouerPanel);
     }
