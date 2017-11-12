@@ -73,7 +73,7 @@ public class Profil
         frmMonProfil = new JFrame();
         frmMonProfil.setTitle("Profil");
         frmMonProfil.setResizable(false);
-        frmMonProfil.setBounds(100, 100, 542, 398);
+        frmMonProfil.setBounds(100, 100, 542, 314);
         frmMonProfil.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         JPanel ProfilPanel = new JPanel();
@@ -94,12 +94,12 @@ public class Profil
         GroupLayout gl_ProfilPanel = new GroupLayout(ProfilPanel);
         gl_ProfilPanel.setHorizontalGroup(
             gl_ProfilPanel.createParallelGroup(Alignment.LEADING)
-                .addGroup(gl_ProfilPanel.createSequentialGroup()
-                    .addGroup(gl_ProfilPanel.createParallelGroup(Alignment.LEADING)
+                .addGroup(Alignment.TRAILING, gl_ProfilPanel.createSequentialGroup()
+                    .addGroup(gl_ProfilPanel.createParallelGroup(Alignment.TRAILING)
                         .addComponent(ProfilTabbedPane, GroupLayout.DEFAULT_SIZE, 514, Short.MAX_VALUE)
-                        .addGroup(Alignment.TRAILING, gl_ProfilPanel.createSequentialGroup()
+                        .addGroup(gl_ProfilPanel.createSequentialGroup()
                             .addComponent(ProfilLblBonjourBienvenue)
-                            .addPreferredGap(ComponentPlacement.RELATED, 415, Short.MAX_VALUE)
+                            .addPreferredGap(ComponentPlacement.RELATED, 198, Short.MAX_VALUE)
                             .addComponent(ProfilBtnAide)))
                     .addContainerGap())
         );
@@ -110,8 +110,8 @@ public class Profil
                         .addComponent(ProfilBtnAide)
                         .addComponent(ProfilLblBonjourBienvenue))
                     .addGap(17)
-                    .addComponent(ProfilTabbedPane, GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)
-                    .addContainerGap())
+                    .addComponent(ProfilTabbedPane, GroupLayout.PREFERRED_SIZE, 220, GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(86, Short.MAX_VALUE))
         );
         
         JPanel ProfilPanelLocation = new JPanel();
@@ -132,11 +132,11 @@ public class Profil
                             .addGap(197)
                             .addComponent(ProfilLblMesLocationsCours))
                         .addGroup(gl_ProfilPanelLocation.createSequentialGroup()
-                            .addGap(225)
-                            .addComponent(ProfilBtnLouer))
-                        .addGroup(gl_ProfilPanelLocation.createSequentialGroup()
                             .addContainerGap()
-                            .addComponent(ProfilScrollPaneLocation, GroupLayout.DEFAULT_SIZE, 489, Short.MAX_VALUE)))
+                            .addComponent(ProfilScrollPaneLocation, GroupLayout.DEFAULT_SIZE, 489, Short.MAX_VALUE))
+                        .addGroup(gl_ProfilPanelLocation.createSequentialGroup()
+                            .addGap(225)
+                            .addComponent(ProfilBtnLouer)))
                     .addContainerGap())
         );
         gl_ProfilPanelLocation.setVerticalGroup(
@@ -145,10 +145,10 @@ public class Profil
                     .addContainerGap()
                     .addComponent(ProfilLblMesLocationsCours)
                     .addGap(17)
-                    .addComponent(ProfilScrollPaneLocation, GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
-                    .addPreferredGap(ComponentPlacement.UNRELATED)
+                    .addComponent(ProfilScrollPaneLocation, GroupLayout.PREFERRED_SIZE, 96, GroupLayout.PREFERRED_SIZE)
+                    .addGap(18)
                     .addComponent(ProfilBtnLouer)
-                    .addContainerGap())
+                    .addContainerGap(88, Short.MAX_VALUE))
         );
         
         ProfilTableLocation = new JTable();
