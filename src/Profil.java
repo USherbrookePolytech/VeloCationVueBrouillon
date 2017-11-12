@@ -12,15 +12,8 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JTabbedPane;
 import javax.swing.JLabel;
 import javax.swing.JTable;
-import javax.swing.border.SoftBevelBorder;
-import javax.swing.border.BevelBorder;
-import javax.swing.JList;
 import java.awt.Font;
 import javax.swing.JScrollPane;
-import javax.swing.JScrollBar;
-import java.awt.GridBagLayout;
-import java.awt.GridBagConstraints;
-import java.awt.Insets;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
@@ -38,6 +31,8 @@ public class Profil
 
     private JFrame frmMonProfil;
     private JTable ProfilTableLocation;
+    private JTable ProfilTableInformation;
+    private JTable ProfilTableInfoAbonnement;
     
 
     /**
@@ -182,19 +177,135 @@ public class Profil
         
         JPanel ProfilPanelInformation = new JPanel();
         ProfilTabbedPane.addTab("Mes informations", null, ProfilPanelInformation, null);
+        
+        JScrollPane ProfilScrollPaneInformation = new JScrollPane();
+        
+        JButton ProfilBtnSeDesinscrire = new JButton("Se désinscrire");
         GroupLayout gl_ProfilPanelInformation = new GroupLayout(ProfilPanelInformation);
         gl_ProfilPanelInformation.setHorizontalGroup(
             gl_ProfilPanelInformation.createParallelGroup(Alignment.LEADING)
-                .addGap(0, 509, Short.MAX_VALUE)
+                .addGroup(gl_ProfilPanelInformation.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(gl_ProfilPanelInformation.createParallelGroup(Alignment.LEADING)
+                        .addGroup(gl_ProfilPanelInformation.createSequentialGroup()
+                            .addComponent(ProfilScrollPaneInformation, GroupLayout.DEFAULT_SIZE, 489, Short.MAX_VALUE)
+                            .addContainerGap())
+                        .addGroup(Alignment.TRAILING, gl_ProfilPanelInformation.createSequentialGroup()
+                            .addComponent(ProfilBtnSeDesinscrire)
+                            .addGap(202))))
         );
         gl_ProfilPanelInformation.setVerticalGroup(
             gl_ProfilPanelInformation.createParallelGroup(Alignment.LEADING)
-                .addGap(0, 288, Short.MAX_VALUE)
+                .addGroup(gl_ProfilPanelInformation.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(ProfilScrollPaneInformation, GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE)
+                    .addGap(18)
+                    .addComponent(ProfilBtnSeDesinscrire)
+                    .addContainerGap(171, Short.MAX_VALUE))
         );
+        
+        ProfilTableInformation = new JTable();
+        ProfilTableInformation.setShowHorizontalLines(false);
+        ProfilTableInformation.setModel(new DefaultTableModel(
+            new Object[][] {
+                {"Efema", "Dodu", "31/12/1996", new Integer(1), "rue du Montagnais", "J1HQ23", "Sherbrooke"},
+            },
+            new String[] {
+                "Nom", "Pr\u00E9nom", "Date Naissance", "N\u00B0 voie", "Voie", "Code postal", "Ville"
+            }
+        ) {
+            Class[] columnTypes = new Class[] {
+                String.class, Object.class, Object.class, Integer.class, Object.class, Object.class, Object.class
+            };
+            public Class getColumnClass(int columnIndex) {
+                return columnTypes[columnIndex];
+            }
+        });
+        ProfilTableInformation.getColumnModel().getColumn(0).setResizable(false);
+        ProfilTableInformation.getColumnModel().getColumn(1).setResizable(false);
+        ProfilTableInformation.getColumnModel().getColumn(2).setResizable(false);
+        ProfilTableInformation.getColumnModel().getColumn(2).setPreferredWidth(96);
+        ProfilTableInformation.getColumnModel().getColumn(3).setResizable(false);
+        ProfilTableInformation.getColumnModel().getColumn(3).setPreferredWidth(45);
+        ProfilTableInformation.getColumnModel().getColumn(4).setPreferredWidth(104);
+        ProfilTableInformation.getColumnModel().getColumn(5).setPreferredWidth(67);
+        ProfilTableInformation.getColumnModel().getColumn(6).setResizable(false);
+        ProfilScrollPaneInformation.setViewportView(ProfilTableInformation);
         ProfilPanelInformation.setLayout(gl_ProfilPanelInformation);
         
         JPanel ProfilPanelInfoAbonnement = new JPanel();
         ProfilTabbedPane.addTab("Mon abonnement", null, ProfilPanelInfoAbonnement, null);
+        
+        JScrollPane ProfilScrollPaneInfoAbonnement = new JScrollPane();
+        
+        JButton ProfilButtonResilier = new JButton("Résilier");
+        
+        JButton ProfilBtnRenouveler = new JButton("Renouveler");
+        
+        JButton ProfilBtnChanger = new JButton("Changer");
+        GroupLayout gl_ProfilPanelInfoAbonnement = new GroupLayout(ProfilPanelInfoAbonnement);
+        gl_ProfilPanelInfoAbonnement.setHorizontalGroup(
+            gl_ProfilPanelInfoAbonnement.createParallelGroup(Alignment.LEADING)
+                .addGroup(gl_ProfilPanelInfoAbonnement.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(ProfilScrollPaneInfoAbonnement, GroupLayout.PREFERRED_SIZE, 489, GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(Alignment.TRAILING, gl_ProfilPanelInfoAbonnement.createSequentialGroup()
+                    .addContainerGap(65, Short.MAX_VALUE)
+                    .addComponent(ProfilButtonResilier, GroupLayout.PREFERRED_SIZE, 99, GroupLayout.PREFERRED_SIZE)
+                    .addGap(55)
+                    .addComponent(ProfilBtnChanger)
+                    .addGap(49)
+                    .addComponent(ProfilBtnRenouveler)
+                    .addGap(81))
+        );
+        gl_ProfilPanelInfoAbonnement.setVerticalGroup(
+            gl_ProfilPanelInfoAbonnement.createParallelGroup(Alignment.LEADING)
+                .addGroup(gl_ProfilPanelInfoAbonnement.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(ProfilScrollPaneInfoAbonnement, GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE)
+                    .addGap(18)
+                    .addGroup(gl_ProfilPanelInfoAbonnement.createParallelGroup(Alignment.BASELINE)
+                        .addComponent(ProfilButtonResilier)
+                        .addComponent(ProfilBtnRenouveler)
+                        .addComponent(ProfilBtnChanger))
+                    .addContainerGap(171, Short.MAX_VALUE))
+        );
+        
+        ProfilTableInfoAbonnement = new JTable();
+        ProfilTableInfoAbonnement.setShowHorizontalLines(false);
+        ProfilTableInfoAbonnement.setRowSelectionAllowed(false);
+        ProfilTableInfoAbonnement.setModel(new DefaultTableModel(
+            new Object[][] {
+                {new Integer(1), "10/11/2017 11:03:20", "10/12/2017 11:03:20", new Integer(50)},
+            },
+            new String[] {
+                "Dur\u00E9e en mois", "Date d\u00E9but", "Date fin", "Prix $CAN"
+            }
+        ) {
+            Class[] columnTypes = new Class[] {
+                Integer.class, Object.class, Object.class, Integer.class
+            };
+            public Class getColumnClass(int columnIndex) {
+                return columnTypes[columnIndex];
+            }
+            boolean[] columnEditables = new boolean[] {
+                false, false, false, false
+            };
+            public boolean isCellEditable(int row, int column) {
+                return columnEditables[column];
+            }
+        });
+        ProfilTableInfoAbonnement.getColumnModel().getColumn(0).setResizable(false);
+        ProfilTableInfoAbonnement.getColumnModel().getColumn(0).setPreferredWidth(83);
+        ProfilTableInfoAbonnement.getColumnModel().getColumn(1).setResizable(false);
+        ProfilTableInfoAbonnement.getColumnModel().getColumn(1).setPreferredWidth(120);
+        ProfilTableInfoAbonnement.getColumnModel().getColumn(2).setResizable(false);
+        ProfilTableInfoAbonnement.getColumnModel().getColumn(2).setPreferredWidth(120);
+        ProfilTableInfoAbonnement.getColumnModel().getColumn(3).setResizable(false);
+        ProfilTableInfoAbonnement.getColumnModel().getColumn(3).setPreferredWidth(58);
+        ProfilScrollPaneInfoAbonnement.setViewportView(ProfilTableInfoAbonnement);
+        ProfilPanelInfoAbonnement.setLayout(gl_ProfilPanelInfoAbonnement);
         ProfilPanel.setLayout(gl_ProfilPanel);
     }
 }
