@@ -74,17 +74,14 @@ public class ConnexionTempNum
         CxTempTextFieldNumero.setColumns(10);
         
         JButton CxTempBtnAnnuler = new JButton("Annuler");
-        CxTempBtnAnnuler.setBackground(new Color(255, 0, 0));
         
         JButton CxTempBtnValider = new JButton("Valider");
-        CxTempBtnValider.setBackground(new Color(102, 204, 0));
         
         JButton CxTempBtnAide = new JButton("Aide");
         CxTempBtnAide.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
             }
         });
-        CxTempBtnAide.setBackground(new Color(255, 51, 255));
         
         JLabel CxTempLblEx = new JLabel("(ex : 0643302958)");
         GroupLayout groupLayout = new GroupLayout(frmConnexionTemporaire.getContentPane());

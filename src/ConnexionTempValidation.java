@@ -60,7 +60,6 @@ public class ConnexionTempValidation
         CxTempValidationLblSaisirLeCode.setFont(new Font("Tahoma", Font.BOLD, 14));
         
         JButton CxTempValidationBtn = new JButton("Aide");
-        CxTempValidationBtn.setBackground(new Color(255, 51, 255));
         
         JLabel CxTempValidationLblCodeReu = new JLabel("Code (3 chiffres)");
         
@@ -70,10 +69,8 @@ public class ConnexionTempValidation
         JLabel CxTempValidationLblEx = new JLabel("(ex : 24353)");
         
         JButton CxTempValidationBtnValider = new JButton("Valider");
-        CxTempValidationBtnValider.setBackground(new Color(102, 204, 0));
         
         JButton CxTempValidationBtnAnnuler = new JButton("Annuler");
-        CxTempValidationBtnAnnuler.setBackground(Color.RED);
         GroupLayout groupLayout = new GroupLayout(frmConnexionTempValidation.getContentPane());
         groupLayout.setHorizontalGroup(
             groupLayout.createParallelGroup(Alignment.TRAILING)

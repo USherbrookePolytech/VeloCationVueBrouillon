@@ -60,7 +60,6 @@ public class Contacter
         ContacterPanel.setBorder(new TitledBorder(null, "Coordonn\u00E9es de l'assistance", TitledBorder.LEADING, TitledBorder.TOP, null, null));
         
         JButton ContacterBtnRetour = new JButton("Retour");
-        ContacterBtnRetour.setBackground(new Color(51, 204, 0));
         GroupLayout groupLayout = new GroupLayout(frmContacter.getContentPane());
         groupLayout.setHorizontalGroup(
             groupLayout.createParallelGroup(Alignment.LEADING)

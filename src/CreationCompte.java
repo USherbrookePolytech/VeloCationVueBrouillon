@@ -94,10 +94,8 @@ public class CreationCompte
         });
         
         JButton CreationBtnValider = new JButton("Valider");
-        CreationBtnValider.setBackground(new Color(102, 204, 0));
         
         CreationBtnRetour = new JButton("Retour");
-        CreationBtnRetour.setBackground(new Color(255, 0, 0));
         GroupLayout groupLayout = new GroupLayout(frmInscription.getContentPane());
         groupLayout.setHorizontalGroup(
             groupLayout.createParallelGroup(Alignment.TRAILING)

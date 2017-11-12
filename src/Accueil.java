@@ -84,7 +84,6 @@ public class Accueil
         frmAcceuil.getContentPane().add(AccueilLblBienvenue, gbc_AccueilLblBienvenue);
         
         JButton AccueilBtnAide = new JButton("Aide");
-        AccueilBtnAide.setBackground(new Color(255, 51, 255));
         GridBagConstraints gbc_AccueilBtnAide = new GridBagConstraints();
         gbc_AccueilBtnAide.insets = new Insets(0, 0, 5, 0);
         gbc_AccueilBtnAide.gridx = 4;
@@ -93,7 +92,6 @@ public class Accueil
         
         JButton AccueilBtnSinscrire = new JButton("S'inscrire");
         AccueilBtnSinscrire.setFont(new Font("Tahoma", Font.BOLD, 11));
-        AccueilBtnSinscrire.setBackground(new Color(0, 255, 51));
         GridBagConstraints gbc_AccueilBtnSinscrire = new GridBagConstraints();
         gbc_AccueilBtnSinscrire.gridwidth = 3;
         gbc_AccueilBtnSinscrire.fill = GridBagConstraints.HORIZONTAL;
@@ -103,7 +101,6 @@ public class Accueil
         frmAcceuil.getContentPane().add(AccueilBtnSinscrire, gbc_AccueilBtnSinscrire);
         
         JButton AccueilBtnSeConnecterTemp = new JButton("Se Connecter - Sans compte");
-        AccueilBtnSeConnecterTemp.setBackground(new Color(255, 255, 255));
         AccueilBtnSeConnecterTemp.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
             }
@@ -116,7 +113,6 @@ public class Accueil
         frmAcceuil.getContentPane().add(AccueilBtnSeConnecterTemp, gbc_AccueilBtnSeConnecterTemp);
         
         JButton AccueilBtnSeConnecter = new JButton("S'identifier - Compte client");
-        AccueilBtnSeConnecter.setBackground(new Color(51, 0, 255));
         AccueilBtnSeConnecter.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
             }

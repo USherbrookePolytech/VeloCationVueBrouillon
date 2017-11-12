@@ -69,14 +69,12 @@ public class Paiement
         frmPaiement.getContentPane().add(PaiementPanel, BorderLayout.CENTER);
         
         JButton PaiementBtnPayerViaPaypal = new JButton("Payer via Paypal");
-        PaiementBtnPayerViaPaypal.setBackground(new Color(51, 204, 0));
         PaiementBtnPayerViaPaypal.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
             }
         });
         
         JButton PaiementBtnAbandonner = new JButton("Abandonner");
-        PaiementBtnAbandonner.setBackground(new Color(255, 0, 0));
         
         JLabel PaiementLblMontantPayer = new JLabel("Montant à payer : XX $CAN");
         PaiementLblMontantPayer.setFont(new Font("Tahoma", Font.BOLD, 13));

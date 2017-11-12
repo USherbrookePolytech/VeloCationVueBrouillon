@@ -56,13 +56,11 @@ public class ConnexionCarte
         frmScannerVotreCarte.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         JButton CxCarteBtnAnnuler = new JButton("Annuler");
-        CxCarteBtnAnnuler.setBackground(new Color(255, 0, 0));
         
         JLabel CxCarteLblScannerVotreCarte = new JLabel("Scanner votre carte sur le lecteur");
         CxCarteLblScannerVotreCarte.setFont(new Font("Tahoma", Font.BOLD, 16));
         
         JButton CxCarteBtnAide = new JButton("Aide");
-        CxCarteBtnAide.setBackground(new Color(255, 51, 255));
         GroupLayout groupLayout = new GroupLayout(frmScannerVotreCarte.getContentPane());
         groupLayout.setHorizontalGroup(
             groupLayout.createParallelGroup(Alignment.TRAILING)

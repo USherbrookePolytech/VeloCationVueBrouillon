@@ -75,7 +75,6 @@ public class Profil
         JTabbedPane ProfilTabbedPane = new JTabbedPane(JTabbedPane.TOP);
         
         JButton ProfilBtnAide = new JButton("Aide");
-        ProfilBtnAide.setBackground(new Color(255, 51, 255));
         ProfilBtnAide.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
             }
@@ -87,7 +86,6 @@ public class Profil
         JLabel ProfilLblConnectEnTant = new JLabel("Connecté en tant que Dodu Efema");
         
         JButton ProfilBtnDeconnexion = new JButton("Deconnexion");
-        ProfilBtnDeconnexion.setBackground(new Color(255, 102, 0));
         GroupLayout gl_ProfilPanel = new GroupLayout(ProfilPanel);
         gl_ProfilPanel.setHorizontalGroup(
             gl_ProfilPanel.createParallelGroup(Alignment.TRAILING)

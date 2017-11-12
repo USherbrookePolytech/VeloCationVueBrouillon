@@ -64,28 +64,26 @@ public class Abonnements
         AbonnementsPanel.setBorder(new TitledBorder(null, "Choisissez votre abonnement", TitledBorder.LEADING, TitledBorder.TOP, null, null));
         
         JButton AbonnementsBtnAnnulerLinscription = new JButton("Annuler l'inscription");
-        AbonnementsBtnAnnulerLinscription.setBackground(new Color(255, 0, 0));
         
         JButton AbonnementsBtnRetour = new JButton("Retour");
-        AbonnementsBtnRetour.setBackground(new Color(255, 102, 0));
         GroupLayout groupLayout = new GroupLayout(frmAbonnement.getContentPane());
         groupLayout.setHorizontalGroup(
             groupLayout.createParallelGroup(Alignment.LEADING)
                 .addGroup(groupLayout.createSequentialGroup()
-                    .addContainerGap()
                     .addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
                         .addGroup(groupLayout.createSequentialGroup()
-                            .addComponent(AbonnementsPanel, GroupLayout.DEFAULT_SIZE, 529, Short.MAX_VALUE)
-                            .addContainerGap())
-                        .addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(AbonnementsPanel, GroupLayout.DEFAULT_SIZE, 529, Short.MAX_VALUE))
+                        .addGroup(groupLayout.createSequentialGroup()
+                            .addGap(137)
                             .addComponent(AbonnementsBtnRetour)
                             .addGap(84)
-                            .addComponent(AbonnementsBtnAnnulerLinscription)
-                            .addGap(124))))
+                            .addComponent(AbonnementsBtnAnnulerLinscription)))
+                    .addContainerGap())
         );
         groupLayout.setVerticalGroup(
-            groupLayout.createParallelGroup(Alignment.LEADING)
-                .addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
+            groupLayout.createParallelGroup(Alignment.TRAILING)
+                .addGroup(groupLayout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(AbonnementsPanel, GroupLayout.DEFAULT_SIZE, 349, Short.MAX_VALUE)
                     .addPreferredGap(ComponentPlacement.RELATED)
@@ -107,7 +105,6 @@ public class Abonnements
         AbonnementsLbl3Mois.setFont(new Font("Stencil", Font.PLAIN, 29));
         
         JButton AbonnementsBtn3Mois = new JButton("Choisir 3 mois");
-        AbonnementsBtn3Mois.setBackground(new Color(51, 204, 0));
         GroupLayout gl_AbonnementsPanelAbo3 = new GroupLayout(AbonnementsPanelAbo3);
         gl_AbonnementsPanelAbo3.setHorizontalGroup(
             gl_AbonnementsPanelAbo3.createParallelGroup(Alignment.TRAILING)
@@ -143,7 +140,6 @@ public class Abonnements
         AbonnementsLbl1An.setFont(new Font("Stencil", Font.PLAIN, 29));
         
         JButton AbonnementsBtn1An = new JButton("Choisir 1 an");
-        AbonnementsBtn1An.setBackground(new Color(51, 204, 0));
         GroupLayout gl_AbonnementsPanel1An = new GroupLayout(AbonnementsPanel1An);
         gl_AbonnementsPanel1An.setHorizontalGroup(
             gl_AbonnementsPanel1An.createParallelGroup(Alignment.TRAILING)
@@ -171,7 +167,6 @@ public class Abonnements
         AbonnementsPanel1An.setLayout(gl_AbonnementsPanel1An);
         
         JButton AbonnementsBtnAide = new JButton("Aide");
-        AbonnementsBtnAide.setBackground(new Color(255, 51, 255));
         GroupLayout gl_AbonnementsPanel = new GroupLayout(AbonnementsPanel);
         gl_AbonnementsPanel.setHorizontalGroup(
             gl_AbonnementsPanel.createParallelGroup(Alignment.LEADING)
@@ -201,7 +196,6 @@ public class Abonnements
         AbonnementsLbl1Mois.setFont(new Font("Stencil", Font.PLAIN, 29));
         
         JButton AbonnementsBtn1Mois = new JButton("Choisir 1 mois");
-        AbonnementsBtn1Mois.setBackground(new Color(51, 204, 0));
         AbonnementsBtn1Mois.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
             }

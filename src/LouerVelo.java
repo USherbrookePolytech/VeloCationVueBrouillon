@@ -70,13 +70,10 @@ public class LouerVelo
         LouerLblVotreLocationSera.setFont(new Font("Tahoma", Font.BOLD, 14));
         
         JButton LouerBtnAide = new JButton("Aide");
-        LouerBtnAide.setBackground(new Color(255, 51, 255));
         
         JButton LouerBtnValider = new JButton("Valider");
-        LouerBtnValider.setBackground(new Color(102, 204, 0));
         
         JButton LouerBtnAnnuler = new JButton("Annuler");
-        LouerBtnAnnuler.setBackground(new Color(255, 0, 0));
         
         JLabel LouerLblCaution = new JLabel("Note : Caution de 200$ CAN par vélo");
         LouerLblCaution.setFont(new Font("Tahoma", Font.BOLD, 11));
