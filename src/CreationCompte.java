@@ -84,7 +84,7 @@ public class CreationCompte
         JPanel CreationPanelVous = new JPanel();
         CreationPanelVous.setBorder(new TitledBorder(null, "Qui \u00EAtes-vous ?", TitledBorder.LEADING, TitledBorder.TOP, null, null));
         
-        CreationPanelAdresse = new JPanel();
+        JPanel CreationPanelAdresse = new JPanel();
         CreationPanelAdresse.setBorder(new TitledBorder(null, "Votre adresse principale", TitledBorder.LEADING, TitledBorder.TOP, null, null));
         
         JButton CreationBtnReinitialiser = new JButton("Réinitialiser");
@@ -95,7 +95,7 @@ public class CreationCompte
         
         JButton CreationBtnValider = new JButton("Valider");
         
-        CreationBtnRetour = new JButton("Retour");
+        JButton CreationBtnRetour = new JButton("Retour");
         GroupLayout groupLayout = new GroupLayout(frmInscription.getContentPane());
         groupLayout.setHorizontalGroup(
             groupLayout.createParallelGroup(Alignment.TRAILING)
@@ -133,32 +133,32 @@ public class CreationCompte
         JLabel lblNumero = new JLabel("Numéro :");
         lblNumero.setHorizontalAlignment(SwingConstants.RIGHT);
         
-        txtNumero = new JTextField();
+        JTextField txtNumero = new JTextField();
         txtNumero.setColumns(10);
         
-        lblVoie = new JLabel("Voie :");
+        JLabel lblVoie = new JLabel("Voie :");
         
-        txtVoie = new JTextField();
+        JTextField txtVoie = new JTextField();
         txtVoie.setColumns(10);
         
-        lblExVoie = new JLabel("(ex : 1)");
+        JLabel lblExVoie = new JLabel("(ex : 1)");
         
-        lblexRue = new JLabel("(ex : rue le Montagnais)");
+        JLabel lblexRue = new JLabel("(ex : rue le Montagnais)");
         
-        lblVille = new JLabel("Ville :");
+        JLabel lblVille = new JLabel("Ville :");
         
-        lblCodePostal = new JLabel("Code postal :");
+        JLabel lblCodePostal = new JLabel("Code postal :");
         
-        txtCodepostal = new JTextField();
+        JTextField txtCodepostal = new JTextField();
         txtCodepostal.setColumns(10);
         
-        lblexJhw = new JLabel("(ex : J1H2W3)");
+        JLabel lblexJhw = new JLabel("(ex : J1H2W3)");
         
-        txtVille = new JTextField();
+        JTextField txtVille = new JTextField();
         txtVille.setToolTipText("test");
         txtVille.setColumns(10);
         
-        lblexSherbrooke = new JLabel("(ex : Sherbrooke)");
+        JLabel lblexSherbrooke = new JLabel("(ex : Sherbrooke)");
         GroupLayout gl_CreationPanelAdresse = new GroupLayout(CreationPanelAdresse);
         gl_CreationPanelAdresse.setHorizontalGroup(
             gl_CreationPanelAdresse.createParallelGroup(Alignment.TRAILING)
@@ -216,22 +216,22 @@ public class CreationCompte
         );
         CreationPanelAdresse.setLayout(gl_CreationPanelAdresse);
         
-        txtNom = new JTextField();
+        JTextField txtNom = new JTextField();
         txtNom.setColumns(10);
         
-        lblNom = new JLabel("Nom :");
+        JLabel lblNom = new JLabel("Nom :");
         
-        lblPrenom = new JLabel("Prenom :");
+        JLabel lblPrenom = new JLabel("Prenom :");
         
-        txtPrenom = new JTextField();
+        JTextField txtPrenom = new JTextField();
         txtPrenom.setColumns(10);
         
-        dateChooser = new JDateChooser();
+        JDateChooser dateChooser = new JDateChooser();
         dateChooser.setDateFormatString("dd/MM/yyyy");
         
-        lblDateDeNaissance = new JLabel("Date de naissance :");
+        JLabel lblDateDeNaissance = new JLabel("Date de naissance :");
         
-        lblexDateNaissance = new JLabel("(ex : 31/12/1996)");
+        JLabel lblexDateNaissance = new JLabel("(ex : 31/12/1996)");
         GroupLayout gl_CreationPanelVous = new GroupLayout(CreationPanelVous);
         gl_CreationPanelVous.setHorizontalGroup(
             gl_CreationPanelVous.createParallelGroup(Alignment.LEADING)
@@ -286,5 +286,6 @@ public class CreationCompte
         );
         CreationPanelVous.setLayout(gl_CreationPanelVous);
         frmInscription.getContentPane().setLayout(groupLayout);
+    }
     }
 }
