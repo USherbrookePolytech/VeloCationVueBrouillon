@@ -8,7 +8,6 @@ import java.awt.Font;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JTextField;
 import javax.swing.JButton;
-import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -16,9 +15,7 @@ public class ConnexionTempNum
 {
 
     private JFrame frmConnexionTemporaire;
-    private JTextField CxTempTextFieldCode;
-    private JTextField CxTempTextFieldNumero;
-
+    
     /**
      * Launch the application.
      */
@@ -66,11 +63,11 @@ public class ConnexionTempNum
         
         JLabel CxTempLblNumro = new JLabel("Numéro");
         
-        CxTempTextFieldCode = new JTextField();
+        JTextField CxTempTextFieldCode = new JTextField();
         CxTempTextFieldCode.setText("+33");
         CxTempTextFieldCode.setColumns(10);
         
-        CxTempTextFieldNumero = new JTextField();
+        JTextField CxTempTextFieldNumero = new JTextField();
         CxTempTextFieldNumero.setColumns(10);
         
         JButton CxTempBtnAnnuler = new JButton("Annuler");

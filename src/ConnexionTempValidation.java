@@ -14,7 +14,6 @@ public class ConnexionTempValidation
 {
 
     private JFrame frmConnexionTempValidation;
-    private JTextField CxTempValidationTextFieldCode;
 
     /**
      * Launch the application.
@@ -63,7 +62,7 @@ public class ConnexionTempValidation
         
         JLabel CxTempValidationLblCodeReu = new JLabel("Code (3 chiffres)");
         
-        CxTempValidationTextFieldCode = new JTextField();
+        JTextField CxTempValidationTextFieldCode = new JTextField();
         CxTempValidationTextFieldCode.setColumns(10);
         
         JLabel CxTempValidationLblEx = new JLabel("(ex : 24353)");
