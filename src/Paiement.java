@@ -7,6 +7,10 @@ import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.border.TitledBorder;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
+import java.awt.Font;
 
 public class Paiement
 {
@@ -51,7 +55,7 @@ public class Paiement
         frmPaiement = new JFrame();
         frmPaiement.setResizable(false);
         frmPaiement.setTitle("Paiement");
-        frmPaiement.setBounds(100, 100, 259, 104);
+        frmPaiement.setBounds(100, 100, 259, 116);
         frmPaiement.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         JPanel PaiementPanel = new JPanel();
@@ -59,25 +63,39 @@ public class Paiement
         frmPaiement.getContentPane().add(PaiementPanel, BorderLayout.CENTER);
         
         JButton PaiementBtnPayerViaPaypal = new JButton("Payer via Paypal");
+        PaiementBtnPayerViaPaypal.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+            }
+        });
         
         JButton PaiementBtnAbandonner = new JButton("Abandonner");
+        
+        JLabel PaiementLblMontantPayer = new JLabel("Montant à payer : XX $CAN");
+        PaiementLblMontantPayer.setFont(new Font("Tahoma", Font.BOLD, 13));
         GroupLayout gl_PaiementPanel = new GroupLayout(PaiementPanel);
         gl_PaiementPanel.setHorizontalGroup(
-            gl_PaiementPanel.createParallelGroup(Alignment.LEADING)
+            gl_PaiementPanel.createParallelGroup(Alignment.TRAILING)
                 .addGroup(gl_PaiementPanel.createSequentialGroup()
+                    .addContainerGap(37, Short.MAX_VALUE)
+                    .addComponent(PaiementLblMontantPayer)
+                    .addGap(26))
+                .addGroup(gl_PaiementPanel.createSequentialGroup()
+                    .addGap(15)
                     .addComponent(PaiementBtnAbandonner)
                     .addGap(18)
                     .addComponent(PaiementBtnPayerViaPaypal, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addContainerGap())
+                    .addGap(4))
         );
         gl_PaiementPanel.setVerticalGroup(
-            gl_PaiementPanel.createParallelGroup(Alignment.LEADING)
-                .addGroup(gl_PaiementPanel.createSequentialGroup()
+            gl_PaiementPanel.createParallelGroup(Alignment.TRAILING)
+                .addGroup(Alignment.LEADING, gl_PaiementPanel.createSequentialGroup()
                     .addContainerGap()
+                    .addComponent(PaiementLblMontantPayer)
+                    .addGap(11)
                     .addGroup(gl_PaiementPanel.createParallelGroup(Alignment.BASELINE)
                         .addComponent(PaiementBtnAbandonner)
                         .addComponent(PaiementBtnPayerViaPaypal, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGap(8))
+                    .addGap(16))
         );
         PaiementPanel.setLayout(gl_PaiementPanel);
     }
