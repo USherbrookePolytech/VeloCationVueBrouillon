@@ -13,6 +13,7 @@ import javax.swing.SwingConstants;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
 
 public class CreationCompte
 {
@@ -37,6 +38,7 @@ public class CreationCompte
     private JTextField txtVille;
     private JLabel lblexSherbrooke;
     private JLabel lblexDateNaissance;
+    private JButton CreationBtnRetour;
 
     /**
      * Launch the application.
@@ -92,6 +94,10 @@ public class CreationCompte
         });
         
         JButton CreationBtnValider = new JButton("Valider");
+        CreationBtnValider.setBackground(new Color(102, 204, 0));
+        
+        CreationBtnRetour = new JButton("Retour");
+        CreationBtnRetour.setBackground(new Color(255, 0, 0));
         GroupLayout groupLayout = new GroupLayout(frmInscription.getContentPane());
         groupLayout.setHorizontalGroup(
             groupLayout.createParallelGroup(Alignment.TRAILING)
@@ -103,9 +109,11 @@ public class CreationCompte
                                 .addComponent(CreationPanelAdresse, GroupLayout.PREFERRED_SIZE, 363, GroupLayout.PREFERRED_SIZE)
                                 .addComponent(CreationPanelVous, GroupLayout.DEFAULT_SIZE, 366, Short.MAX_VALUE)))
                         .addGroup(groupLayout.createSequentialGroup()
-                            .addGap(94)
+                            .addGap(67)
+                            .addComponent(CreationBtnRetour)
+                            .addGap(18)
                             .addComponent(CreationBtnReinitialiser)
-                            .addGap(41)
+                            .addGap(18)
                             .addComponent(CreationBtnValider)))
                     .addContainerGap())
         );
@@ -119,8 +127,9 @@ public class CreationCompte
                     .addPreferredGap(ComponentPlacement.RELATED)
                     .addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
                         .addComponent(CreationBtnReinitialiser)
+                        .addComponent(CreationBtnRetour)
                         .addComponent(CreationBtnValider))
-                    .addContainerGap(26, Short.MAX_VALUE))
+                    .addContainerGap(14, Short.MAX_VALUE))
         );
         
         JLabel lblNumero = new JLabel("Numéro :");

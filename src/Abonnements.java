@@ -64,8 +64,10 @@ public class Abonnements
         AbonnementsPanel.setBorder(new TitledBorder(null, "Choisissez votre abonnement", TitledBorder.LEADING, TitledBorder.TOP, null, null));
         
         JButton AbonnementsBtnAnnulerLinscription = new JButton("Annuler l'inscription");
+        AbonnementsBtnAnnulerLinscription.setBackground(new Color(255, 0, 0));
         
         JButton AbonnementsBtnRetour = new JButton("Retour");
+        AbonnementsBtnRetour.setBackground(new Color(255, 102, 0));
         GroupLayout groupLayout = new GroupLayout(frmAbonnement.getContentPane());
         groupLayout.setHorizontalGroup(
             groupLayout.createParallelGroup(Alignment.LEADING)
@@ -93,141 +95,144 @@ public class Abonnements
                     .addContainerGap())
         );
         
-        JPanel panelAbo1 = new JPanel();
-        panelAbo1.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+        JPanel AbonnementsPanelAbo1 = new JPanel();
+        AbonnementsPanelAbo1.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
         
-        JPanel panelAbo3 = new JPanel();
-        panelAbo3.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+        JPanel AbonnementsPanelAbo3 = new JPanel();
+        AbonnementsPanelAbo3.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
         
-        JLabel lblDetail3Mois = new JLabel("Accès illimité aux bornes VeloCation 24h/24 pendant 3 mois");
+        JLabel AbonnementsLblDetail3Mois = new JLabel("Accès illimité aux bornes VeloCation 24h/24 pendant 3 mois");
         
-        JLabel lbl3Mois = new JLabel("3 Mois -> $130 (CAN)");
-        lbl3Mois.setFont(new Font("Stencil", Font.PLAIN, 29));
+        JLabel AbonnementsLbl3Mois = new JLabel("3 Mois -> $130 (CAN)");
+        AbonnementsLbl3Mois.setFont(new Font("Stencil", Font.PLAIN, 29));
         
-        JButton btn3Mois = new JButton("Choisir 3 mois");
-        GroupLayout gl_panelAbo3 = new GroupLayout(panelAbo3);
-        gl_panelAbo3.setHorizontalGroup(
-            gl_panelAbo3.createParallelGroup(Alignment.TRAILING)
-                .addGroup(gl_panelAbo3.createSequentialGroup()
+        JButton AbonnementsBtn3Mois = new JButton("Choisir 3 mois");
+        AbonnementsBtn3Mois.setBackground(new Color(51, 204, 0));
+        GroupLayout gl_AbonnementsPanelAbo3 = new GroupLayout(AbonnementsPanelAbo3);
+        gl_AbonnementsPanelAbo3.setHorizontalGroup(
+            gl_AbonnementsPanelAbo3.createParallelGroup(Alignment.TRAILING)
+                .addGroup(gl_AbonnementsPanelAbo3.createSequentialGroup()
                     .addContainerGap()
-                    .addGroup(gl_panelAbo3.createParallelGroup(Alignment.LEADING)
-                        .addGroup(gl_panelAbo3.createSequentialGroup()
-                            .addComponent(lblDetail3Mois)
+                    .addGroup(gl_AbonnementsPanelAbo3.createParallelGroup(Alignment.LEADING)
+                        .addGroup(gl_AbonnementsPanelAbo3.createSequentialGroup()
+                            .addComponent(AbonnementsLblDetail3Mois)
                             .addPreferredGap(ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
-                            .addComponent(btn3Mois))
-                        .addComponent(lbl3Mois))
+                            .addComponent(AbonnementsBtn3Mois))
+                        .addComponent(AbonnementsLbl3Mois))
                     .addContainerGap())
         );
-        gl_panelAbo3.setVerticalGroup(
-            gl_panelAbo3.createParallelGroup(Alignment.LEADING)
-                .addGroup(gl_panelAbo3.createSequentialGroup()
+        gl_AbonnementsPanelAbo3.setVerticalGroup(
+            gl_AbonnementsPanelAbo3.createParallelGroup(Alignment.LEADING)
+                .addGroup(gl_AbonnementsPanelAbo3.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(lbl3Mois)
+                    .addComponent(AbonnementsLbl3Mois)
                     .addGap(11)
-                    .addGroup(gl_panelAbo3.createParallelGroup(Alignment.BASELINE)
-                        .addComponent(btn3Mois, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(lblDetail3Mois))
+                    .addGroup(gl_AbonnementsPanelAbo3.createParallelGroup(Alignment.BASELINE)
+                        .addComponent(AbonnementsBtn3Mois, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(AbonnementsLblDetail3Mois))
                     .addContainerGap())
         );
-        panelAbo3.setLayout(gl_panelAbo3);
+        AbonnementsPanelAbo3.setLayout(gl_AbonnementsPanelAbo3);
         
-        JPanel panel1An = new JPanel();
-        panel1An.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+        JPanel AbonnementsPanel1An = new JPanel();
+        AbonnementsPanel1An.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
         
-        JLabel lblDetail1An = new JLabel("Accès illimité aux bornes VeloCation 24h/24 pendant 1 an");
+        JLabel AbonnementsLblDetail1An = new JLabel("Accès illimité aux bornes VeloCation 24h/24 pendant 1 an");
         
-        JLabel lbl1An = new JLabel("1 an -> $540 (CAN)");
-        lbl1An.setFont(new Font("Stencil", Font.PLAIN, 29));
+        JLabel AbonnementsLbl1An = new JLabel("1 an -> $540 (CAN)");
+        AbonnementsLbl1An.setFont(new Font("Stencil", Font.PLAIN, 29));
         
-        JButton btn1An = new JButton("Choisir 1 an");
-        GroupLayout gl_panel1An = new GroupLayout(panel1An);
-        gl_panel1An.setHorizontalGroup(
-            gl_panel1An.createParallelGroup(Alignment.TRAILING)
-                .addGroup(gl_panel1An.createSequentialGroup()
+        JButton AbonnementsBtn1An = new JButton("Choisir 1 an");
+        AbonnementsBtn1An.setBackground(new Color(51, 204, 0));
+        GroupLayout gl_AbonnementsPanel1An = new GroupLayout(AbonnementsPanel1An);
+        gl_AbonnementsPanel1An.setHorizontalGroup(
+            gl_AbonnementsPanel1An.createParallelGroup(Alignment.TRAILING)
+                .addGroup(gl_AbonnementsPanel1An.createSequentialGroup()
                     .addContainerGap()
-                    .addGroup(gl_panel1An.createParallelGroup(Alignment.LEADING)
-                        .addComponent(lbl1An)
-                        .addGroup(gl_panel1An.createSequentialGroup()
-                            .addComponent(lblDetail1An)
+                    .addGroup(gl_AbonnementsPanel1An.createParallelGroup(Alignment.LEADING)
+                        .addComponent(AbonnementsLbl1An)
+                        .addGroup(gl_AbonnementsPanel1An.createSequentialGroup()
+                            .addComponent(AbonnementsLblDetail1An)
                             .addPreferredGap(ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
-                            .addComponent(btn1An, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(AbonnementsBtn1An, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE)))
                     .addContainerGap())
         );
-        gl_panel1An.setVerticalGroup(
-            gl_panel1An.createParallelGroup(Alignment.LEADING)
-                .addGroup(gl_panel1An.createSequentialGroup()
+        gl_AbonnementsPanel1An.setVerticalGroup(
+            gl_AbonnementsPanel1An.createParallelGroup(Alignment.LEADING)
+                .addGroup(gl_AbonnementsPanel1An.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(lbl1An)
+                    .addComponent(AbonnementsLbl1An)
                     .addPreferredGap(ComponentPlacement.UNRELATED)
-                    .addGroup(gl_panel1An.createParallelGroup(Alignment.BASELINE)
-                        .addComponent(lblDetail1An)
-                        .addComponent(btn1An, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(gl_AbonnementsPanel1An.createParallelGroup(Alignment.BASELINE)
+                        .addComponent(AbonnementsLblDetail1An)
+                        .addComponent(AbonnementsBtn1An, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addContainerGap())
         );
-        panel1An.setLayout(gl_panel1An);
+        AbonnementsPanel1An.setLayout(gl_AbonnementsPanel1An);
         
-        JButton btnAide = new JButton("Aide");
-        btnAide.setBackground(new Color(255, 51, 255));
+        JButton AbonnementsBtnAide = new JButton("Aide");
+        AbonnementsBtnAide.setBackground(new Color(255, 51, 255));
         GroupLayout gl_AbonnementsPanel = new GroupLayout(AbonnementsPanel);
         gl_AbonnementsPanel.setHorizontalGroup(
             gl_AbonnementsPanel.createParallelGroup(Alignment.LEADING)
                 .addGroup(gl_AbonnementsPanel.createSequentialGroup()
                     .addContainerGap()
                     .addGroup(gl_AbonnementsPanel.createParallelGroup(Alignment.LEADING)
-                        .addComponent(panel1An, GroupLayout.DEFAULT_SIZE, 497, Short.MAX_VALUE)
-                        .addComponent(panelAbo3, GroupLayout.DEFAULT_SIZE, 496, Short.MAX_VALUE)
-                        .addComponent(panelAbo1, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnAide, Alignment.TRAILING))
+                        .addComponent(AbonnementsPanel1An, GroupLayout.DEFAULT_SIZE, 497, Short.MAX_VALUE)
+                        .addComponent(AbonnementsPanelAbo3, GroupLayout.DEFAULT_SIZE, 496, Short.MAX_VALUE)
+                        .addComponent(AbonnementsPanelAbo1, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(AbonnementsBtnAide, Alignment.TRAILING))
                     .addContainerGap())
         );
         gl_AbonnementsPanel.setVerticalGroup(
             gl_AbonnementsPanel.createParallelGroup(Alignment.LEADING)
                 .addGroup(Alignment.TRAILING, gl_AbonnementsPanel.createSequentialGroup()
-                    .addComponent(btnAide)
+                    .addComponent(AbonnementsBtnAide)
                     .addPreferredGap(ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
-                    .addComponent(panelAbo1, GroupLayout.PREFERRED_SIZE, 89, GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AbonnementsPanelAbo1, GroupLayout.PREFERRED_SIZE, 89, GroupLayout.PREFERRED_SIZE)
                     .addPreferredGap(ComponentPlacement.RELATED)
-                    .addComponent(panelAbo3, GroupLayout.PREFERRED_SIZE, 89, GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AbonnementsPanelAbo3, GroupLayout.PREFERRED_SIZE, 89, GroupLayout.PREFERRED_SIZE)
                     .addPreferredGap(ComponentPlacement.RELATED)
-                    .addComponent(panel1An, GroupLayout.PREFERRED_SIZE, 89, GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AbonnementsPanel1An, GroupLayout.PREFERRED_SIZE, 89, GroupLayout.PREFERRED_SIZE)
                     .addContainerGap())
         );
         
-        JLabel lbl1Mois = new JLabel("1 Mois -> $50 (CAN)");
-        lbl1Mois.setFont(new Font("Stencil", Font.PLAIN, 29));
+        JLabel AbonnementsLbl1Mois = new JLabel("1 Mois -> $50 (CAN)");
+        AbonnementsLbl1Mois.setFont(new Font("Stencil", Font.PLAIN, 29));
         
-        JButton btn1Mois = new JButton("Choisir 1 mois");
-        btn1Mois.addActionListener(new ActionListener() {
+        JButton AbonnementsBtn1Mois = new JButton("Choisir 1 mois");
+        AbonnementsBtn1Mois.setBackground(new Color(51, 204, 0));
+        AbonnementsBtn1Mois.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
             }
         });
         
-        JLabel lblDetail1Mois = new JLabel("Accès illimité aux bornes VeloCation 24h/24 pendant 1 mois");
-        GroupLayout gl_panelAbo1 = new GroupLayout(panelAbo1);
-        gl_panelAbo1.setHorizontalGroup(
-            gl_panelAbo1.createParallelGroup(Alignment.TRAILING)
-                .addGroup(gl_panelAbo1.createSequentialGroup()
+        JLabel AbonnementsLblDetail1Mois = new JLabel("Accès illimité aux bornes VeloCation 24h/24 pendant 1 mois");
+        GroupLayout gl_AbonnementsPanelAbo1 = new GroupLayout(AbonnementsPanelAbo1);
+        gl_AbonnementsPanelAbo1.setHorizontalGroup(
+            gl_AbonnementsPanelAbo1.createParallelGroup(Alignment.TRAILING)
+                .addGroup(gl_AbonnementsPanelAbo1.createSequentialGroup()
                     .addContainerGap()
-                    .addGroup(gl_panelAbo1.createParallelGroup(Alignment.LEADING)
-                        .addGroup(gl_panelAbo1.createSequentialGroup()
-                            .addComponent(lblDetail1Mois)
+                    .addGroup(gl_AbonnementsPanelAbo1.createParallelGroup(Alignment.LEADING)
+                        .addGroup(gl_AbonnementsPanelAbo1.createSequentialGroup()
+                            .addComponent(AbonnementsLblDetail1Mois)
                             .addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btn1Mois))
-                        .addComponent(lbl1Mois))
+                            .addComponent(AbonnementsBtn1Mois))
+                        .addComponent(AbonnementsLbl1Mois))
                     .addContainerGap())
         );
-        gl_panelAbo1.setVerticalGroup(
-            gl_panelAbo1.createParallelGroup(Alignment.LEADING)
-                .addGroup(gl_panelAbo1.createSequentialGroup()
+        gl_AbonnementsPanelAbo1.setVerticalGroup(
+            gl_AbonnementsPanelAbo1.createParallelGroup(Alignment.LEADING)
+                .addGroup(gl_AbonnementsPanelAbo1.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(lbl1Mois)
+                    .addComponent(AbonnementsLbl1Mois)
                     .addPreferredGap(ComponentPlacement.UNRELATED)
-                    .addGroup(gl_panelAbo1.createParallelGroup(Alignment.BASELINE)
-                        .addComponent(lblDetail1Mois)
-                        .addComponent(btn1Mois, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(gl_AbonnementsPanelAbo1.createParallelGroup(Alignment.BASELINE)
+                        .addComponent(AbonnementsLblDetail1Mois)
+                        .addComponent(AbonnementsBtn1Mois, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addContainerGap())
         );
-        panelAbo1.setLayout(gl_panelAbo1);
+        AbonnementsPanelAbo1.setLayout(gl_AbonnementsPanelAbo1);
         AbonnementsPanel.setLayout(gl_AbonnementsPanel);
         frmAbonnement.getContentPane().setLayout(groupLayout);
     }

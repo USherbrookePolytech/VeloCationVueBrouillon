@@ -9,6 +9,8 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class ConnexionTempNum
 {
@@ -78,6 +80,10 @@ public class ConnexionTempNum
         CxTempBtnValider.setBackground(new Color(102, 204, 0));
         
         JButton CxTempBtnAide = new JButton("Aide");
+        CxTempBtnAide.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+            }
+        });
         CxTempBtnAide.setBackground(new Color(255, 51, 255));
         
         JLabel CxTempLblEx = new JLabel("(ex : 0643302958)");

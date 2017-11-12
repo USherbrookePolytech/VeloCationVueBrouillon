@@ -10,14 +10,6 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.Font;
 import java.awt.Color;
 
-/**
- * 
- */
-
-/**
- * @author Bebo
- *
- */
 public class ConnexionCarte
 {
 

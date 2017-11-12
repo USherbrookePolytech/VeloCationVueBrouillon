@@ -83,33 +83,50 @@ public class Profil
         
         JLabel ProfilLblBonjourBienvenue = new JLabel("Bonjour ! Bienvenue sur votre profil ;)");
         ProfilLblBonjourBienvenue.setFont(new Font("Tahoma", Font.BOLD, 14));
+        
+        JLabel ProfilLblConnectEnTant = new JLabel("Connecté en tant que Dodu Efema");
+        
+        JButton ProfilBtnDeconnexion = new JButton("Deconnexion");
+        ProfilBtnDeconnexion.setBackground(new Color(255, 102, 0));
         GroupLayout gl_ProfilPanel = new GroupLayout(ProfilPanel);
         gl_ProfilPanel.setHorizontalGroup(
-            gl_ProfilPanel.createParallelGroup(Alignment.LEADING)
-                .addGroup(Alignment.TRAILING, gl_ProfilPanel.createSequentialGroup()
+            gl_ProfilPanel.createParallelGroup(Alignment.TRAILING)
+                .addGroup(gl_ProfilPanel.createSequentialGroup()
+                    .addContainerGap()
                     .addGroup(gl_ProfilPanel.createParallelGroup(Alignment.TRAILING)
-                        .addComponent(ProfilTabbedPane, GroupLayout.DEFAULT_SIZE, 514, Short.MAX_VALUE)
-                        .addGroup(gl_ProfilPanel.createSequentialGroup()
+                        .addComponent(ProfilTabbedPane, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 514, Short.MAX_VALUE)
+                        .addGroup(Alignment.LEADING, gl_ProfilPanel.createSequentialGroup()
                             .addComponent(ProfilLblBonjourBienvenue)
                             .addPreferredGap(ComponentPlacement.RELATED, 198, Short.MAX_VALUE)
-                            .addComponent(ProfilBtnAide)))
+                            .addComponent(ProfilBtnAide))
+                        .addGroup(Alignment.LEADING, gl_ProfilPanel.createSequentialGroup()
+                            .addComponent(ProfilLblConnectEnTant)
+                            .addPreferredGap(ComponentPlacement.RELATED)
+                            .addComponent(ProfilBtnDeconnexion)))
                     .addContainerGap())
         );
         gl_ProfilPanel.setVerticalGroup(
             gl_ProfilPanel.createParallelGroup(Alignment.LEADING)
                 .addGroup(gl_ProfilPanel.createSequentialGroup()
+                    .addGroup(gl_ProfilPanel.createParallelGroup(Alignment.LEADING)
+                        .addGroup(gl_ProfilPanel.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(ProfilLblBonjourBienvenue))
+                        .addComponent(ProfilBtnAide))
+                    .addPreferredGap(ComponentPlacement.RELATED)
                     .addGroup(gl_ProfilPanel.createParallelGroup(Alignment.BASELINE)
-                        .addComponent(ProfilBtnAide)
-                        .addComponent(ProfilLblBonjourBienvenue))
-                    .addGap(17)
-                    .addComponent(ProfilTabbedPane, GroupLayout.PREFERRED_SIZE, 220, GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(86, Short.MAX_VALUE))
+                        .addComponent(ProfilLblConnectEnTant)
+                        .addComponent(ProfilBtnDeconnexion))
+                    .addPreferredGap(ComponentPlacement.RELATED)
+                    .addComponent(ProfilTabbedPane, GroupLayout.PREFERRED_SIZE, 198, Short.MAX_VALUE)
+                    .addContainerGap())
         );
         
         JPanel ProfilPanelLocation = new JPanel();
         ProfilTabbedPane.addTab("Location", null, ProfilPanelLocation, null);
         
         JButton ProfilBtnLouer = new JButton("Louer");
+        ProfilBtnLouer.setBackground(new Color(51, 204, 0));
         
         JLabel ProfilLblMesLocationsCours = new JLabel("Historique de mes locations :");
         ProfilLblMesLocationsCours.setFont(new Font("Tahoma", Font.BOLD, 11));
@@ -124,11 +141,11 @@ public class Profil
                             .addContainerGap()
                             .addComponent(ProfilScrollPaneLocation, GroupLayout.DEFAULT_SIZE, 489, Short.MAX_VALUE))
                         .addGroup(gl_ProfilPanelLocation.createSequentialGroup()
-                            .addGap(225)
-                            .addComponent(ProfilBtnLouer))
-                        .addGroup(gl_ProfilPanelLocation.createSequentialGroup()
                             .addGap(173)
-                            .addComponent(ProfilLblMesLocationsCours)))
+                            .addComponent(ProfilLblMesLocationsCours))
+                        .addGroup(gl_ProfilPanelLocation.createSequentialGroup()
+                            .addGap(225)
+                            .addComponent(ProfilBtnLouer)))
                     .addContainerGap())
         );
         gl_ProfilPanelLocation.setVerticalGroup(
@@ -138,9 +155,9 @@ public class Profil
                     .addComponent(ProfilLblMesLocationsCours)
                     .addGap(17)
                     .addComponent(ProfilScrollPaneLocation, GroupLayout.PREFERRED_SIZE, 96, GroupLayout.PREFERRED_SIZE)
-                    .addGap(18)
+                    .addPreferredGap(ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
                     .addComponent(ProfilBtnLouer)
-                    .addContainerGap(13, Short.MAX_VALUE))
+                    .addGap(9))
         );
         
         ProfilTableLocation = new JTable();
@@ -180,6 +197,7 @@ public class Profil
         JScrollPane ProfilScrollPaneInformation = new JScrollPane();
         
         JButton ProfilBtnSeDesinscrire = new JButton("Se désinscrire");
+        ProfilBtnSeDesinscrire.setBackground(new Color(204, 0, 0));
         GroupLayout gl_ProfilPanelInformation = new GroupLayout(ProfilPanelInformation);
         gl_ProfilPanelInformation.setHorizontalGroup(
             gl_ProfilPanelInformation.createParallelGroup(Alignment.LEADING)
@@ -238,10 +256,13 @@ public class Profil
         JScrollPane ProfilScrollPaneInfoAbonnement = new JScrollPane();
         
         JButton ProfilButtonResilier = new JButton("Résilier");
+        ProfilButtonResilier.setBackground(new Color(255, 0, 0));
         
         JButton ProfilBtnRenouveler = new JButton("Renouveler");
+        ProfilBtnRenouveler.setBackground(new Color(51, 204, 0));
         
         JButton ProfilBtnChanger = new JButton("Changer");
+        ProfilBtnChanger.setBackground(new Color(102, 204, 0));
         GroupLayout gl_ProfilPanelInfoAbonnement = new GroupLayout(ProfilPanelInfoAbonnement);
         gl_ProfilPanelInfoAbonnement.setHorizontalGroup(
             gl_ProfilPanelInfoAbonnement.createParallelGroup(Alignment.LEADING)
