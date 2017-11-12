@@ -14,7 +14,7 @@ import java.awt.Color;
 public class Accueil
 {
 
-    private JFrame frmAcceuil;
+    private JFrame frmAccueil;
 
     /**
      * Launch the application.
@@ -28,7 +28,7 @@ public class Accueil
                 try
                 {
                     Accueil window = new Accueil();
-                    window.frmAcceuil.setVisible(true);
+                    window.frmAccueil.setVisible(true);
                 }
                 catch (Exception e)
                 {
@@ -51,18 +51,18 @@ public class Accueil
      */
     private void initialize()
     {
-        frmAcceuil = new JFrame();
-        frmAcceuil.setResizable(false);
-        frmAcceuil.getContentPane().setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 17));
-        frmAcceuil.setTitle("Accueil");
-        frmAcceuil.setBounds(100, 100, 555, 219);
-        frmAcceuil.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frmAccueil = new JFrame();
+        frmAccueil.setResizable(false);
+        frmAccueil.getContentPane().setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 17));
+        frmAccueil.setTitle("Accueil");
+        frmAccueil.setBounds(100, 100, 555, 219);
+        frmAccueil.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         GridBagLayout gridBagLayout = new GridBagLayout();
         gridBagLayout.columnWidths = new int[]{80, 191, 0, 191, 80, 0};
         gridBagLayout.rowHeights = new int[]{0, 55, 0, 0, 0, 9, 0};
         gridBagLayout.columnWeights = new double[]{0.0, 0.0, 0.0, 1.0, 0.0, Double.MIN_VALUE};
         gridBagLayout.rowWeights = new double[]{1.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
-        frmAcceuil.getContentPane().setLayout(gridBagLayout);
+        frmAccueil.getContentPane().setLayout(gridBagLayout);
         
         JLabel AccueilLblVelocation = new JLabel("VeloCation - Bienvenue !");
         AccueilLblVelocation.setFont(new Font("Tahoma", Font.BOLD, 17));
@@ -72,7 +72,7 @@ public class Accueil
         gbc_AccueilLblVelocation.insets = new Insets(0, 0, 5, 5);
         gbc_AccueilLblVelocation.gridx = 1;
         gbc_AccueilLblVelocation.gridy = 0;
-        frmAcceuil.getContentPane().add(AccueilLblVelocation, gbc_AccueilLblVelocation);
+        frmAccueil.getContentPane().add(AccueilLblVelocation, gbc_AccueilLblVelocation);
         
         JLabel AccueilLblBienvenue = new JLabel("Borne n°72 - 5 rue de l'Interface - J1H Q4H Sherbrooke");
         AccueilLblBienvenue.setFont(new Font("Tahoma", Font.BOLD, 12));
@@ -81,14 +81,14 @@ public class Accueil
         gbc_AccueilLblBienvenue.insets = new Insets(0, 0, 5, 5);
         gbc_AccueilLblBienvenue.gridx = 1;
         gbc_AccueilLblBienvenue.gridy = 1;
-        frmAcceuil.getContentPane().add(AccueilLblBienvenue, gbc_AccueilLblBienvenue);
+        frmAccueil.getContentPane().add(AccueilLblBienvenue, gbc_AccueilLblBienvenue);
         
         JButton AccueilBtnAide = new JButton("Aide");
         GridBagConstraints gbc_AccueilBtnAide = new GridBagConstraints();
         gbc_AccueilBtnAide.insets = new Insets(0, 0, 5, 0);
         gbc_AccueilBtnAide.gridx = 4;
         gbc_AccueilBtnAide.gridy = 1;
-        frmAcceuil.getContentPane().add(AccueilBtnAide, gbc_AccueilBtnAide);
+        frmAccueil.getContentPane().add(AccueilBtnAide, gbc_AccueilBtnAide);
         
         JButton AccueilBtnSinscrire = new JButton("S'inscrire");
         AccueilBtnSinscrire.setFont(new Font("Tahoma", Font.BOLD, 11));
@@ -98,7 +98,7 @@ public class Accueil
         gbc_AccueilBtnSinscrire.insets = new Insets(0, 0, 5, 5);
         gbc_AccueilBtnSinscrire.gridx = 1;
         gbc_AccueilBtnSinscrire.gridy = 2;
-        frmAcceuil.getContentPane().add(AccueilBtnSinscrire, gbc_AccueilBtnSinscrire);
+        frmAccueil.getContentPane().add(AccueilBtnSinscrire, gbc_AccueilBtnSinscrire);
         
         JButton AccueilBtnSeConnecterTemp = new JButton("Se Connecter - Sans compte");
         AccueilBtnSeConnecterTemp.addActionListener(new ActionListener() {
@@ -110,7 +110,7 @@ public class Accueil
         gbc_AccueilBtnSeConnecterTemp.insets = new Insets(0, 0, 5, 5);
         gbc_AccueilBtnSeConnecterTemp.gridx = 1;
         gbc_AccueilBtnSeConnecterTemp.gridy = 3;
-        frmAcceuil.getContentPane().add(AccueilBtnSeConnecterTemp, gbc_AccueilBtnSeConnecterTemp);
+        frmAccueil.getContentPane().add(AccueilBtnSeConnecterTemp, gbc_AccueilBtnSeConnecterTemp);
         
         JButton AccueilBtnSeConnecter = new JButton("S'identifier - Compte client");
         AccueilBtnSeConnecter.addActionListener(new ActionListener() {
@@ -123,13 +123,13 @@ public class Accueil
         gbc_AccueilLblOu.insets = new Insets(0, 0, 5, 5);
         gbc_AccueilLblOu.gridx = 2;
         gbc_AccueilLblOu.gridy = 3;
-        frmAcceuil.getContentPane().add(AccueilLblOu, gbc_AccueilLblOu);
+        frmAccueil.getContentPane().add(AccueilLblOu, gbc_AccueilLblOu);
         GridBagConstraints gbc_AccueilBtnSeConnecter = new GridBagConstraints();
         gbc_AccueilBtnSeConnecter.fill = GridBagConstraints.HORIZONTAL;
         gbc_AccueilBtnSeConnecter.insets = new Insets(0, 0, 5, 5);
         gbc_AccueilBtnSeConnecter.gridx = 3;
         gbc_AccueilBtnSeConnecter.gridy = 3;
-        frmAcceuil.getContentPane().add(AccueilBtnSeConnecter, gbc_AccueilBtnSeConnecter);
+        frmAccueil.getContentPane().add(AccueilBtnSeConnecter, gbc_AccueilBtnSeConnecter);
         
         JButton AccueilBtnAfficherCarte = new JButton("Carte bornes");
         GridBagConstraints gbc_AccueilBtnAfficherCarte = new GridBagConstraints();
@@ -138,7 +138,7 @@ public class Accueil
         gbc_AccueilBtnAfficherCarte.insets = new Insets(0, 0, 5, 5);
         gbc_AccueilBtnAfficherCarte.gridx = 1;
         gbc_AccueilBtnAfficherCarte.gridy = 4;
-        frmAcceuil.getContentPane().add(AccueilBtnAfficherCarte, gbc_AccueilBtnAfficherCarte);
+        frmAccueil.getContentPane().add(AccueilBtnAfficherCarte, gbc_AccueilBtnAfficherCarte);
     }
 
 }
