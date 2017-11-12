@@ -13,32 +13,11 @@ import javax.swing.SwingConstants;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import java.awt.Color;
 
 public class CreationCompte
 {
 
     private JFrame frmInscription;
-    private JTextField txtNom;
-    private JLabel lblNom;
-    private JLabel lblPrenom;
-    private JTextField txtPrenom;
-    private JLabel lblDateDeNaissance;
-    private JDateChooser dateChooser;
-    private JPanel CreationPanelAdresse;
-    private JTextField txtNumero;
-    private JLabel lblVoie;
-    private JTextField txtVoie;
-    private JLabel lblExVoie;
-    private JLabel lblexRue;
-    private JLabel lblVille;
-    private JLabel lblCodePostal;
-    private JTextField txtCodepostal;
-    private JLabel lblexJhw;
-    private JTextField txtVille;
-    private JLabel lblexSherbrooke;
-    private JLabel lblexDateNaissance;
-    private JButton CreationBtnRetour;
 
     /**
      * Launch the application.
