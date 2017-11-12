@@ -92,6 +92,7 @@ public class Accueil
         frmAcceuil.getContentPane().add(lblBienvenue, gbc_lblBienvenue);
         
         JButton btnAide = new JButton("Aide");
+        btnAide.setBackground(new Color(255, 51, 255));
         GridBagConstraints gbc_btnAide = new GridBagConstraints();
         gbc_btnAide.insets = new Insets(0, 0, 5, 0);
         gbc_btnAide.gridx = 4;

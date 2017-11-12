@@ -13,6 +13,7 @@ import javax.swing.JButton;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
 
 /**
  * 
@@ -175,6 +176,7 @@ public class Abonnements
         panel1An.setLayout(gl_panel1An);
         
         JButton btnAide = new JButton("Aide");
+        btnAide.setBackground(new Color(255, 51, 255));
         GroupLayout gl_panelAbonnements = new GroupLayout(panelAbonnements);
         gl_panelAbonnements.setHorizontalGroup(
             gl_panelAbonnements.createParallelGroup(Alignment.LEADING)
