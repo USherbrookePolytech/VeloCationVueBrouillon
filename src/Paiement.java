@@ -21,7 +21,6 @@ public class Paiement
 {
 
     private JFrame frmPaiement;
-    private JTable table;
 
     /**
      * Launch the application.
@@ -119,7 +118,7 @@ public class Paiement
                         .addComponent(PaiementBtnAbandonner)))
         );
         
-        table = new JTable();
+        JTable table = new JTable();
         table.setModel(new DefaultTableModel(
             new Object[][] {
                 {"2", "V\u00E9lo Caution", new Integer(300)},

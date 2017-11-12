@@ -22,9 +22,6 @@ public class Profil
 {
 
     private JFrame frmMonProfil;
-    private JTable ProfilTableLocation;
-    private JTable ProfilTableInformation;
-    private JTable ProfilTableInfoAbonnement;
     
 
     /**
@@ -158,7 +155,7 @@ public class Profil
                     .addGap(9))
         );
         
-        ProfilTableLocation = new JTable();
+        JTable ProfilTableLocation = new JTable();
         ProfilTableLocation.setModel(new DefaultTableModel(
             new Object[][] {
                 {new Integer(2), "10/11/2017 11:05:23", "11/11/2017 11:00:00", Boolean.TRUE},
@@ -219,7 +216,7 @@ public class Profil
                     .addContainerGap(171, Short.MAX_VALUE))
         );
         
-        ProfilTableInformation = new JTable();
+        JTable ProfilTableInformation = new JTable();
         ProfilTableInformation.setShowHorizontalLines(false);
         ProfilTableInformation.setModel(new DefaultTableModel(
             new Object[][] {
@@ -290,7 +287,7 @@ public class Profil
                     .addContainerGap(171, Short.MAX_VALUE))
         );
         
-        ProfilTableInfoAbonnement = new JTable();
+        JTable ProfilTableInfoAbonnement = new JTable();
         ProfilTableInfoAbonnement.setShowHorizontalLines(false);
         ProfilTableInfoAbonnement.setRowSelectionAllowed(false);
         ProfilTableInfoAbonnement.setModel(new DefaultTableModel(
