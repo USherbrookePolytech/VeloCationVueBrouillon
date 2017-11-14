@@ -9,11 +9,13 @@ import javax.swing.JLabel;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.Font;
 import java.awt.Color;
+import javax.swing.JTextField;
 
 public class ConnexionCarte
 {
 
     private JFrame frmScannerVotreCarte;
+    private JTextField CxCarteTxtId;
 
     /**
      * Launch the application.
@@ -52,7 +54,7 @@ public class ConnexionCarte
     {
         frmScannerVotreCarte = new JFrame();
         frmScannerVotreCarte.setTitle("Scanner votre carte");
-        frmScannerVotreCarte.setBounds(100, 100, 450, 151);
+        frmScannerVotreCarte.setBounds(100, 100, 450, 176);
         frmScannerVotreCarte.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         JButton CxCarteBtnAnnuler = new JButton("Annuler");
@@ -61,34 +63,55 @@ public class ConnexionCarte
         CxCarteLblScannerVotreCarte.setFont(new Font("Tahoma", Font.BOLD, 16));
         
         JButton CxCarteBtnAide = new JButton("Aide");
+        
+        JButton CxCarteBtnScanner = new JButton("Scanner");
+        
+        CxCarteTxtId = new JTextField();
+        CxCarteTxtId.setColumns(10);
+        
+        JLabel CxCarteLblVotreId = new JLabel("Votre id :");
         GroupLayout groupLayout = new GroupLayout(frmScannerVotreCarte.getContentPane());
         groupLayout.setHorizontalGroup(
-            groupLayout.createParallelGroup(Alignment.TRAILING)
+            groupLayout.createParallelGroup(Alignment.LEADING)
                 .addGroup(groupLayout.createSequentialGroup()
-                    .addGap(81)
-                    .addComponent(CxCarteLblScannerVotreCarte)
-                    .addContainerGap(81, Short.MAX_VALUE))
-                .addGroup(groupLayout.createSequentialGroup()
-                    .addContainerGap(371, Short.MAX_VALUE)
-                    .addComponent(CxCarteBtnAide, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE)
+                    .addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+                        .addGroup(groupLayout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(CxCarteLblScannerVotreCarte)
+                            .addPreferredGap(ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                            .addComponent(CxCarteBtnAide, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE))
+                        .addGroup(groupLayout.createSequentialGroup()
+                            .addGap(116)
+                            .addComponent(CxCarteLblVotreId)
+                            .addPreferredGap(ComponentPlacement.RELATED)
+                            .addComponent(CxCarteTxtId, GroupLayout.PREFERRED_SIZE, 154, GroupLayout.PREFERRED_SIZE)))
                     .addContainerGap())
-                .addGroup(Alignment.LEADING, groupLayout.createSequentialGroup()
-                    .addGap(183)
+                .addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
+                    .addGap(97)
+                    .addComponent(CxCarteBtnScanner, GroupLayout.DEFAULT_SIZE, 242, Short.MAX_VALUE)
+                    .addGap(85))
+                .addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
+                    .addContainerGap(189, Short.MAX_VALUE)
                     .addComponent(CxCarteBtnAnnuler)
-                    .addContainerGap(182, Short.MAX_VALUE))
+                    .addGap(176))
         );
         groupLayout.setVerticalGroup(
-            groupLayout.createParallelGroup(Alignment.TRAILING)
-                .addGroup(Alignment.LEADING, groupLayout.createSequentialGroup()
+            groupLayout.createParallelGroup(Alignment.LEADING)
+                .addGroup(groupLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(CxCarteBtnAide)
-                    .addGap(10)
-                    .addComponent(CxCarteLblScannerVotreCarte)
-                    .addGap(18)
+                    .addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
+                        .addComponent(CxCarteBtnAide)
+                        .addComponent(CxCarteLblScannerVotreCarte))
+                    .addPreferredGap(ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                    .addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
+                        .addComponent(CxCarteLblVotreId)
+                        .addComponent(CxCarteTxtId, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                    .addPreferredGap(ComponentPlacement.UNRELATED)
+                    .addComponent(CxCarteBtnScanner)
+                    .addGap(11)
                     .addComponent(CxCarteBtnAnnuler)
-                    .addContainerGap(156, Short.MAX_VALUE))
+                    .addGap(33))
         );
         frmScannerVotreCarte.getContentPane().setLayout(groupLayout);
     }
-
 }
