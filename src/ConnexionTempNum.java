@@ -53,7 +53,7 @@ public class ConnexionTempNum
     {
         frmConnexionTemporaire = new JFrame();
         frmConnexionTemporaire.setTitle("Connexion temporaire");
-        frmConnexionTemporaire.setBounds(100, 100, 450, 192);
+        frmConnexionTemporaire.setBounds(100, 100, 482, 220);
         frmConnexionTemporaire.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         JLabel CxTempLblSaisirVotreNumro = new JLabel("Saisir votre numéro de téléphone :");
@@ -83,7 +83,7 @@ public class ConnexionTempNum
         JLabel CxTempLblEx = new JLabel("(ex : 0643302958)");
         GroupLayout groupLayout = new GroupLayout(frmConnexionTemporaire.getContentPane());
         groupLayout.setHorizontalGroup(
-            groupLayout.createParallelGroup(Alignment.LEADING)
+            groupLayout.createParallelGroup(Alignment.TRAILING)
                 .addGroup(groupLayout.createSequentialGroup()
                     .addGap(98)
                     .addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
@@ -107,10 +107,10 @@ public class ConnexionTempNum
                             .addComponent(CxTempBtnAnnuler)
                             .addPreferredGap(ComponentPlacement.UNRELATED)
                             .addComponent(CxTempBtnValider)))
-                    .addContainerGap(53, Short.MAX_VALUE))
-                .addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
-                    .addContainerGap(371, Short.MAX_VALUE)
-                    .addComponent(CxTempBtnAide, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(groupLayout.createSequentialGroup()
+                    .addContainerGap(403, Short.MAX_VALUE)
+                    .addComponent(CxTempBtnAide, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
                     .addContainerGap())
         );
         groupLayout.setVerticalGroup(
@@ -133,7 +133,7 @@ public class ConnexionTempNum
                     .addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
                         .addComponent(CxTempBtnAnnuler)
                         .addComponent(CxTempBtnValider))
-                    .addContainerGap(115, Short.MAX_VALUE))
+                    .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         frmConnexionTemporaire.getContentPane().setLayout(groupLayout);
     }

@@ -57,7 +57,7 @@ public class ConnexionTempValidation
         JLabel CxTempValidationLblSaisirLeCode = new JLabel("Saisir le code reçu par SMS :");
         CxTempValidationLblSaisirLeCode.setFont(new Font("Tahoma", Font.BOLD, 14));
         
-        JButton CxTempValidationBtn = new JButton("Aide");
+        JButton CxTempValidationBtnAide = new JButton("Aide");
         
         JLabel CxTempValidationLblCodeReu = new JLabel("Code (3 chiffres)");
         
@@ -77,7 +77,7 @@ public class ConnexionTempValidation
                     .addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
                         .addGroup(groupLayout.createSequentialGroup()
                             .addGap(273)
-                            .addComponent(CxTempValidationBtn, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE))
+                            .addComponent(CxTempValidationBtnAide, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE))
                         .addGroup(groupLayout.createSequentialGroup()
                             .addGap(47)
                             .addComponent(CxTempValidationBtnAnnuler, GroupLayout.PREFERRED_SIZE, 69, GroupLayout.PREFERRED_SIZE)
@@ -103,7 +103,7 @@ public class ConnexionTempValidation
             groupLayout.createParallelGroup(Alignment.LEADING)
                 .addGroup(groupLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(CxTempValidationBtn)
+                    .addComponent(CxTempValidationBtnAide)
                     .addGap(8)
                     .addComponent(CxTempValidationLblSaisirLeCode, GroupLayout.PREFERRED_SIZE, 17, GroupLayout.PREFERRED_SIZE)
                     .addPreferredGap(ComponentPlacement.RELATED)
