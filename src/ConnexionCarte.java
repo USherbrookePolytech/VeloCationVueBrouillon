@@ -15,7 +15,6 @@ public class ConnexionCarte
 {
 
     private JFrame frmScannerVotreCarte;
-    private JTextField CxCarteTxtId;
 
     /**
      * Launch the application.
@@ -66,7 +65,7 @@ public class ConnexionCarte
         
         JButton CxCarteBtnScanner = new JButton("Scanner");
         
-        CxCarteTxtId = new JTextField();
+        JTextField CxCarteTxtId = new JTextField();
         CxCarteTxtId.setColumns(10);
         
         JLabel CxCarteLblVotreId = new JLabel("Votre id :");
