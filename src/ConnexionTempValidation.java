@@ -55,6 +55,7 @@ public class ConnexionTempValidation
         frmConnexionTempValidation.setTitle("Vérification téléphone");
         frmConnexionTempValidation.setBounds(100, 100, 450, 194);
         frmConnexionTempValidation.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frmConnexionTempValidation.setLocationRelativeTo(null);
         
         JLabel CxTempValidationLblSaisirLeCode = new JLabel("Saisir le code reçu par SMS :");
         CxTempValidationLblSaisirLeCode.setFont(new Font("Tahoma", Font.BOLD, 14));

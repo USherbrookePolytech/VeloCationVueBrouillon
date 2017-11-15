@@ -64,6 +64,7 @@ public class Profil
         frmMonProfil.setResizable(false);
         frmMonProfil.setBounds(100, 100, 542, 314);
         frmMonProfil.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frmMonProfil.setLocationRelativeTo(null);
         
         JPanel ProfilPanel = new JPanel();
         ProfilPanel.setBorder(new TitledBorder(null, "Mon Profil", TitledBorder.LEADING, TitledBorder.TOP, null, null));

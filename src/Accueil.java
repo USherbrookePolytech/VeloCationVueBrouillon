@@ -63,6 +63,7 @@ public class Accueil
         gridBagLayout.columnWeights = new double[]{0.0, 0.0, 0.0, 1.0, 0.0, Double.MIN_VALUE};
         gridBagLayout.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
         frmAccueil.getContentPane().setLayout(gridBagLayout);
+        frmAccueil.setLocationRelativeTo(null);
         
         JLabel AccueilLblVelocation = new JLabel("VeloCation - Bienvenue !");
         AccueilLblVelocation.setFont(new Font("Tahoma", Font.BOLD, 17));

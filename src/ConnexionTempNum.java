@@ -55,6 +55,7 @@ public class ConnexionTempNum
         frmConnexionTemporaire.setTitle("Connexion temporaire");
         frmConnexionTemporaire.setBounds(100, 100, 482, 220);
         frmConnexionTemporaire.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frmConnexionTemporaire.setLocationRelativeTo(null);
         
         JLabel CxTempLblSaisirVotreNumro = new JLabel("Saisir votre numéro de téléphone :");
         CxTempLblSaisirVotreNumro.setFont(new Font("Tahoma", Font.BOLD, 14));
