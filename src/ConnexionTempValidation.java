@@ -78,7 +78,7 @@ public class ConnexionTempValidation
         JButton CxTempValidationBtnAnnuler = new JButton("Annuler");
         GroupLayout groupLayout = new GroupLayout(frmConnexionTempValidation.getContentPane());
         groupLayout.setHorizontalGroup(
-            groupLayout.createParallelGroup(Alignment.TRAILING)
+            groupLayout.createParallelGroup(Alignment.LEADING)
                 .addGroup(groupLayout.createSequentialGroup()
                     .addGap(174)
                     .addComponent(CxTempValidationLblCodeReu)
@@ -88,21 +88,21 @@ public class ConnexionTempValidation
                     .addComponent(CxTempValidationTextFieldCode, GroupLayout.PREFERRED_SIZE, 58, GroupLayout.PREFERRED_SIZE)
                     .addGap(10)
                     .addComponent(CxTempValidationLblEx)
-                    .addContainerGap(121, Short.MAX_VALUE))
+                    .addContainerGap(133, Short.MAX_VALUE))
                 .addGroup(groupLayout.createSequentialGroup()
                     .addContainerGap(344, Short.MAX_VALUE)
                     .addComponent(CxTempValidationBtnAide, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
                     .addContainerGap())
-                .addGroup(Alignment.LEADING, groupLayout.createSequentialGroup()
+                .addGroup(groupLayout.createSequentialGroup()
                     .addGap(118)
                     .addComponent(CxTempValidationLblSaisirLeCode, GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)
                     .addGap(118))
-                .addGroup(Alignment.LEADING, groupLayout.createSequentialGroup()
-                    .addGap(139)
-                    .addComponent(CxTempValidationBtnAnnuler, GroupLayout.PREFERRED_SIZE, 75, GroupLayout.PREFERRED_SIZE)
+                .addGroup(groupLayout.createSequentialGroup()
+                    .addGap(114)
+                    .addComponent(CxTempValidationBtnAnnuler, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE)
                     .addPreferredGap(ComponentPlacement.RELATED)
-                    .addComponent(CxTempValidationBtnValider, GroupLayout.PREFERRED_SIZE, 75, GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(155, Short.MAX_VALUE))
+                    .addComponent(CxTempValidationBtnValider, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(164, Short.MAX_VALUE))
         );
         groupLayout.setVerticalGroup(
             groupLayout.createParallelGroup(Alignment.LEADING)
