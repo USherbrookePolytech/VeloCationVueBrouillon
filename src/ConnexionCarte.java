@@ -55,6 +55,7 @@ public class ConnexionCarte
         frmScannerVotreCarte.setTitle("Scanner votre carte");
         frmScannerVotreCarte.setBounds(100, 100, 450, 176);
         frmScannerVotreCarte.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frmScannerVotreCarte.setLocationRelativeTo(null);
         
         JButton CxCarteBtnAnnuler = new JButton("Annuler");
         

@@ -59,6 +59,7 @@ public class Abonnements
         frmAbonnement.setTitle("Abonnement");
         frmAbonnement.setBounds(100, 100, 555, 429);
         frmAbonnement.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frmAbonnement.setLocationRelativeTo(null);
         
         JPanel AbonnementsPanel = new JPanel();
         AbonnementsPanel.setBorder(new TitledBorder(null, "Choisissez votre abonnement", TitledBorder.LEADING, TitledBorder.TOP, null, null));

@@ -62,6 +62,7 @@ public class Paiement
         frmPaiement.setTitle("Paiement");
         frmPaiement.setBounds(100, 100, 353, 231);
         frmPaiement.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frmPaiement.setLocationRelativeTo(null);
         
         JPanel PaiementPanel = new JPanel();
         PaiementPanel.setBorder(new TitledBorder(null, "Proc\u00E9dez au paiement", TitledBorder.LEADING, TitledBorder.TOP, null, null));

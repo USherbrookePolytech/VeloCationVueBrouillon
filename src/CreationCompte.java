@@ -59,6 +59,7 @@ public class CreationCompte
         frmInscription.setTitle("Inscription");
         frmInscription.setBounds(100, 100, 392, 342);
         frmInscription.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frmInscription.setLocationRelativeTo(null);
         
         JPanel CreationPanelVous = new JPanel();
         CreationPanelVous.setBorder(new TitledBorder(null, "Qui \u00EAtes-vous ?", TitledBorder.LEADING, TitledBorder.TOP, null, null));

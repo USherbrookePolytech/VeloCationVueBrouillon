@@ -55,6 +55,7 @@ public class Contacter
         frmContacter.setTitle("Contacter");
         frmContacter.setBounds(100, 100, 450, 151);
         frmContacter.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frmContacter.setLocationRelativeTo(null);
         
         JPanel ContacterPanel = new JPanel();
         ContacterPanel.setBorder(new TitledBorder(null, "Coordonn\u00E9es de l'assistance", TitledBorder.LEADING, TitledBorder.TOP, null, null));
