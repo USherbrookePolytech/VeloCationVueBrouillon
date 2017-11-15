@@ -53,7 +53,7 @@ public class ConnexionCarte
     {
         frmScannerVotreCarte = new JFrame();
         frmScannerVotreCarte.setTitle("Scanner votre carte");
-        frmScannerVotreCarte.setBounds(100, 100, 450, 176);
+        frmScannerVotreCarte.setBounds(100, 100, 450, 184);
         frmScannerVotreCarte.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frmScannerVotreCarte.setLocationRelativeTo(null);
         
