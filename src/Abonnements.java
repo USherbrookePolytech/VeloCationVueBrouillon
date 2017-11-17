@@ -112,11 +112,11 @@ public class Abonnements
                 .addGroup(gl_AbonnementsPanelAbo3.createSequentialGroup()
                     .addContainerGap()
                     .addGroup(gl_AbonnementsPanelAbo3.createParallelGroup(Alignment.LEADING)
+                        .addComponent(AbonnementsLblDetail3Mois)
                         .addGroup(gl_AbonnementsPanelAbo3.createSequentialGroup()
-                            .addComponent(AbonnementsLblDetail3Mois)
-                            .addPreferredGap(ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
-                            .addComponent(AbonnementsBtn3Mois))
-                        .addComponent(AbonnementsLbl3Mois))
+                            .addComponent(AbonnementsLbl3Mois)
+                            .addPreferredGap(ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
+                            .addComponent(AbonnementsBtn3Mois)))
                     .addContainerGap())
         );
         gl_AbonnementsPanelAbo3.setVerticalGroup(
@@ -125,10 +125,12 @@ public class Abonnements
                     .addContainerGap()
                     .addComponent(AbonnementsLbl3Mois)
                     .addGap(11)
-                    .addGroup(gl_AbonnementsPanelAbo3.createParallelGroup(Alignment.BASELINE)
-                        .addComponent(AbonnementsBtn3Mois, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(AbonnementsLblDetail3Mois))
+                    .addComponent(AbonnementsLblDetail3Mois)
                     .addContainerGap())
+                .addGroup(Alignment.TRAILING, gl_AbonnementsPanelAbo3.createSequentialGroup()
+                    .addGap(34)
+                    .addComponent(AbonnementsBtn3Mois, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(28))
         );
         AbonnementsPanelAbo3.setLayout(gl_AbonnementsPanelAbo3);
         
@@ -147,11 +149,11 @@ public class Abonnements
                 .addGroup(gl_AbonnementsPanel1An.createSequentialGroup()
                     .addContainerGap()
                     .addGroup(gl_AbonnementsPanel1An.createParallelGroup(Alignment.LEADING)
-                        .addComponent(AbonnementsLbl1An)
                         .addGroup(gl_AbonnementsPanel1An.createSequentialGroup()
-                            .addComponent(AbonnementsLblDetail1An)
-                            .addPreferredGap(ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
-                            .addComponent(AbonnementsBtn1An, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(AbonnementsLbl1An)
+                            .addPreferredGap(ComponentPlacement.RELATED, 107, Short.MAX_VALUE)
+                            .addComponent(AbonnementsBtn1An, GroupLayout.PREFERRED_SIZE, 114, GroupLayout.PREFERRED_SIZE))
+                        .addComponent(AbonnementsLblDetail1An))
                     .addContainerGap())
         );
         gl_AbonnementsPanel1An.setVerticalGroup(
@@ -160,10 +162,12 @@ public class Abonnements
                     .addContainerGap()
                     .addComponent(AbonnementsLbl1An)
                     .addPreferredGap(ComponentPlacement.UNRELATED)
-                    .addGroup(gl_AbonnementsPanel1An.createParallelGroup(Alignment.BASELINE)
-                        .addComponent(AbonnementsLblDetail1An)
-                        .addComponent(AbonnementsBtn1An, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(AbonnementsLblDetail1An)
                     .addContainerGap())
+                .addGroup(gl_AbonnementsPanel1An.createSequentialGroup()
+                    .addGap(37)
+                    .addComponent(AbonnementsBtn1An, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(25))
         );
         AbonnementsPanel1An.setLayout(gl_AbonnementsPanel1An);
         
@@ -209,22 +213,22 @@ public class Abonnements
                 .addGroup(gl_AbonnementsPanelAbo1.createSequentialGroup()
                     .addContainerGap()
                     .addGroup(gl_AbonnementsPanelAbo1.createParallelGroup(Alignment.LEADING)
+                        .addComponent(AbonnementsLblDetail1Mois)
                         .addGroup(gl_AbonnementsPanelAbo1.createSequentialGroup()
-                            .addComponent(AbonnementsLblDetail1Mois)
-                            .addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(AbonnementsBtn1Mois))
-                        .addComponent(AbonnementsLbl1Mois))
+                            .addComponent(AbonnementsLbl1Mois)
+                            .addPreferredGap(ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
+                            .addComponent(AbonnementsBtn1Mois)))
                     .addContainerGap())
         );
         gl_AbonnementsPanelAbo1.setVerticalGroup(
             gl_AbonnementsPanelAbo1.createParallelGroup(Alignment.LEADING)
                 .addGroup(gl_AbonnementsPanelAbo1.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(AbonnementsLbl1Mois)
-                    .addPreferredGap(ComponentPlacement.UNRELATED)
                     .addGroup(gl_AbonnementsPanelAbo1.createParallelGroup(Alignment.BASELINE)
-                        .addComponent(AbonnementsLblDetail1Mois)
+                        .addComponent(AbonnementsLbl1Mois)
                         .addComponent(AbonnementsBtn1Mois, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addPreferredGap(ComponentPlacement.UNRELATED)
+                    .addComponent(AbonnementsLblDetail1Mois)
                     .addContainerGap())
         );
         AbonnementsPanelAbo1.setLayout(gl_AbonnementsPanelAbo1);

@@ -60,7 +60,7 @@ public class Paiement
         frmPaiement = new JFrame();
         frmPaiement.setResizable(false);
         frmPaiement.setTitle("Paiement");
-        frmPaiement.setBounds(100, 100, 353, 231);
+        frmPaiement.setBounds(100, 100, 377, 233);
         frmPaiement.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frmPaiement.setLocationRelativeTo(null);
         
@@ -76,54 +76,59 @@ public class Paiement
         
         JButton PaiementBtnAbandonner = new JButton("Abandonner");
         
-        JLabel PaiementLblMontantPayer = new JLabel("Montant à payer : XX $CAN");
-        PaiementLblMontantPayer.setFont(new Font("Tahoma", Font.BOLD, 13));
-        
         JScrollPane scrollPane = new JScrollPane();
         
         JLabel lblPrixTotal = new JLabel("Prix total : 310$ CAN");
         lblPrixTotal.setFont(new Font("Tahoma", Font.BOLD, 14));
+        
+        JButton btnRetour = new JButton("Retour");
+        
+        JButton btnAide = new JButton("Aide");
         GroupLayout gl_PaiementPanel = new GroupLayout(PaiementPanel);
         gl_PaiementPanel.setHorizontalGroup(
             gl_PaiementPanel.createParallelGroup(Alignment.LEADING)
                 .addGroup(gl_PaiementPanel.createSequentialGroup()
-                    .addContainerGap(84, Short.MAX_VALUE)
-                    .addComponent(PaiementLblMontantPayer)
-                    .addGap(73))
-                .addGroup(gl_PaiementPanel.createSequentialGroup()
-                    .addGap(19)
-                    .addComponent(PaiementBtnAbandonner)
-                    .addGap(18)
-                    .addComponent(PaiementBtnPayerViaPaypal, GroupLayout.DEFAULT_SIZE, 207, Short.MAX_VALUE))
-                .addGroup(gl_PaiementPanel.createSequentialGroup()
-                    .addContainerGap(100, Short.MAX_VALUE)
-                    .addComponent(lblPrixTotal)
-                    .addGap(89))
-                .addGroup(gl_PaiementPanel.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(scrollPane, GroupLayout.DEFAULT_SIZE, 315, Short.MAX_VALUE)
-                    .addContainerGap())
+                    .addGroup(gl_PaiementPanel.createParallelGroup(Alignment.TRAILING)
+                        .addGroup(Alignment.LEADING, gl_PaiementPanel.createSequentialGroup()
+                            .addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 338, GroupLayout.PREFERRED_SIZE)
+                            .addContainerGap())
+                        .addGroup(gl_PaiementPanel.createSequentialGroup()
+                            .addComponent(btnRetour)
+                            .addGap(22)
+                            .addGroup(gl_PaiementPanel.createParallelGroup(Alignment.LEADING)
+                                .addComponent(lblPrixTotal)
+                                .addGroup(gl_PaiementPanel.createSequentialGroup()
+                                    .addComponent(PaiementBtnAbandonner)
+                                    .addPreferredGap(ComponentPlacement.RELATED)
+                                    .addComponent(PaiementBtnPayerViaPaypal, GroupLayout.PREFERRED_SIZE, 138, GroupLayout.PREFERRED_SIZE)))
+                            .addGap(34))))
+                .addGroup(Alignment.TRAILING, gl_PaiementPanel.createSequentialGroup()
+                    .addContainerGap(271, Short.MAX_VALUE)
+                    .addComponent(btnAide)
+                    .addGap(42))
         );
         gl_PaiementPanel.setVerticalGroup(
             gl_PaiementPanel.createParallelGroup(Alignment.LEADING)
                 .addGroup(gl_PaiementPanel.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(PaiementLblMontantPayer)
-                    .addPreferredGap(ComponentPlacement.RELATED)
-                    .addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 89, GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(ComponentPlacement.RELATED)
+                    .addComponent(btnAide)
+                    .addGap(11)
+                    .addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 71, GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(ComponentPlacement.UNRELATED)
                     .addComponent(lblPrixTotal)
-                    .addGap(14)
+                    .addGap(15)
                     .addGroup(gl_PaiementPanel.createParallelGroup(Alignment.BASELINE)
-                        .addComponent(PaiementBtnPayerViaPaypal, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(PaiementBtnAbandonner)))
+                        .addComponent(btnRetour)
+                        .addComponent(PaiementBtnAbandonner)
+                        .addComponent(PaiementBtnPayerViaPaypal, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addContainerGap(17, Short.MAX_VALUE))
         );
         
         JTable table = new JTable();
         table.setModel(new DefaultTableModel(
             new Object[][] {
-                {"2", "V\u00E9lo Caution", new Integer(300)},
-                {"2", "V\u00E9lo non abo 24h", new Integer(10)},
+                {"", "", null},
+                {"", "", null},
             },
             new String[] {
                 "Qte", "Libell\u00E9", "Prix uni. $CAN"
@@ -134,12 +139,6 @@ public class Paiement
             };
             public Class getColumnClass(int columnIndex) {
                 return columnTypes[columnIndex];
-            }
-            boolean[] columnEditables = new boolean[] {
-                true, false, false
-            };
-            public boolean isCellEditable(int row, int column) {
-                return columnEditables[column];
             }
         });
         table.getColumnModel().getColumn(0).setPreferredWidth(32);
