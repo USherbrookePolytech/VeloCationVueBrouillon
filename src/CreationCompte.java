@@ -89,7 +89,6 @@ public class CreationCompte
         {
             public void actionPerformed(ActionEvent arg0)
             {
-                inscriptionController.verifierInscription();
             }
         });
 
@@ -98,8 +97,6 @@ public class CreationCompte
         {
             public void actionPerformed(ActionEvent arg0)
             {
-                frmInscription.setVisible(false);
-                accueilView.getFrmAccueil().setVisible(true);
             }
         });
 

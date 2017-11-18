@@ -65,7 +65,7 @@ public class LouerVelo2
         
         JPanel LouerPanel = new JPanel();
         LouerPanel.setBorder(new TitledBorder(null, "Choisir votre location", TitledBorder.LEADING, TitledBorder.TOP, null, null));
-        frmLouer.getContentPane().add(LouerPanel, BorderLayout.EAST);
+        frmLouer.getContentPane().add(LouerPanel, BorderLayout.NORTH);
         
         JLabel LouerLblNombreDeVlo = new JLabel("Nombre de vélo souhaité :");
         
@@ -84,25 +84,29 @@ public class LouerVelo2
         
         JLabel lblPourVlo = new JLabel("Pour 1 vélo");
         lblPourVlo.setFont(new Font("Tahoma", Font.BOLD, 13));
+        
+        JButton btnRetourProfil = new JButton("Retour profil");
         GroupLayout gl_LouerPanel = new GroupLayout(LouerPanel);
         gl_LouerPanel.setHorizontalGroup(
-            gl_LouerPanel.createParallelGroup(Alignment.LEADING)
+            gl_LouerPanel.createParallelGroup(Alignment.TRAILING)
                 .addGroup(gl_LouerPanel.createSequentialGroup()
                     .addGap(23)
                     .addGroup(gl_LouerPanel.createParallelGroup(Alignment.LEADING)
-                        .addGroup(gl_LouerPanel.createSequentialGroup()
-                            .addComponent(LouerLblNombreDeVlo)
-                            .addPreferredGap(ComponentPlacement.RELATED)
-                            .addComponent(LouerSpinnerVelo, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE))
                         .addGroup(gl_LouerPanel.createParallelGroup(Alignment.TRAILING, false)
                             .addGroup(gl_LouerPanel.createSequentialGroup()
                                 .addComponent(LouerLblVotreLocationSera)
                                 .addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(LouerBtnAide, GroupLayout.PREFERRED_SIZE, 65, GroupLayout.PREFERRED_SIZE))
                             .addComponent(lblPourVlo, Alignment.LEADING)
-                            .addComponent(scrollPane, Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 417, GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(scrollPane, Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 417, GroupLayout.PREFERRED_SIZE))
+                        .addGroup(gl_LouerPanel.createParallelGroup(Alignment.TRAILING)
+                            .addComponent(btnRetourProfil)
+                            .addGroup(gl_LouerPanel.createSequentialGroup()
+                                .addComponent(LouerLblNombreDeVlo)
+                                .addPreferredGap(ComponentPlacement.RELATED)
+                                .addComponent(LouerSpinnerVelo, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE))))
                     .addContainerGap(17, Short.MAX_VALUE))
-                .addGroup(Alignment.TRAILING, gl_LouerPanel.createSequentialGroup()
+                .addGroup(gl_LouerPanel.createSequentialGroup()
                     .addContainerGap(273, Short.MAX_VALUE)
                     .addComponent(LouerBtnAnnuler)
                     .addPreferredGap(ComponentPlacement.UNRELATED)
@@ -117,7 +121,7 @@ public class LouerVelo2
                             .addContainerGap()
                             .addComponent(LouerLblVotreLocationSera))
                         .addComponent(LouerBtnAide))
-                    .addPreferredGap(ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                    .addPreferredGap(ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                     .addComponent(lblPourVlo)
                     .addPreferredGap(ComponentPlacement.RELATED)
                     .addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 61, GroupLayout.PREFERRED_SIZE)
@@ -128,7 +132,8 @@ public class LouerVelo2
                     .addPreferredGap(ComponentPlacement.UNRELATED)
                     .addGroup(gl_LouerPanel.createParallelGroup(Alignment.BASELINE)
                         .addComponent(LouerBtnValider)
-                        .addComponent(LouerBtnAnnuler))
+                        .addComponent(LouerBtnAnnuler)
+                        .addComponent(btnRetourProfil))
                     .addContainerGap())
         );
         
