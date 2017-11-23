@@ -87,6 +87,8 @@ public class Paiement
         JTable table = new JTable();
         table.setModel(new DefaultTableModel(
             new Object[][] {
+                {null, null, null},
+                {null, null, null},
             },
             new String[] {
                 "Qte", "Libell\u00E9", "Prix uni. $CAN"
