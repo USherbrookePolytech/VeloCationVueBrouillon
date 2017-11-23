@@ -13,6 +13,8 @@ import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
+import javax.swing.ImageIcon;
+import java.awt.Color;
 
 public class ConfirmerPaiement
 {
@@ -55,35 +57,40 @@ public class ConfirmerPaiement
     private void initialize()
     {
         frmPaiementValid = new JFrame();
+        frmPaiementValid.setTitle("Paiement validé !");
         frmPaiementValid.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frmPaiementValid.setResizable(false);
-        frmPaiementValid.setBounds(0, 0, 192, 120);
+        frmPaiementValid.setBounds(0, 0, 600, 500);
         frmPaiementValid.setLocationRelativeTo(null);
         
         JLabel lblPaiementValid = new JLabel("Paiement validé");
+        lblPaiementValid.setForeground(new Color(0, 128, 0));
+        lblPaiementValid.setFont(new Font("Tahoma", Font.PLAIN, 34));
+        lblPaiementValid.setIcon(new ImageIcon(ConfirmerPaiement.class.getResource("/javax/swing/plaf/metal/icons/Inform.gif")));
         
         JButton btnAppuyerPourContinuer = new JButton("Appuyer pour continuer");
+        btnAppuyerPourContinuer.setFont(new Font("Tahoma", Font.PLAIN, 18));
         GroupLayout groupLayout = new GroupLayout(frmPaiementValid.getContentPane());
         groupLayout.setHorizontalGroup(
             groupLayout.createParallelGroup(Alignment.TRAILING)
                 .addGroup(groupLayout.createSequentialGroup()
+                    .addContainerGap()
                     .addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
                         .addGroup(groupLayout.createSequentialGroup()
-                            .addGap(50)
-                            .addComponent(lblPaiementValid))
-                        .addGroup(groupLayout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(btnAppuyerPourContinuer)))
-                    .addContainerGap(29, Short.MAX_VALUE))
+                            .addComponent(btnAppuyerPourContinuer, GroupLayout.DEFAULT_SIZE, 574, Short.MAX_VALUE)
+                            .addContainerGap())
+                        .addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
+                            .addComponent(lblPaiementValid)
+                            .addGap(158))))
         );
         groupLayout.setVerticalGroup(
             groupLayout.createParallelGroup(Alignment.LEADING)
                 .addGroup(groupLayout.createSequentialGroup()
-                    .addGap(21)
+                    .addGap(115)
                     .addComponent(lblPaiementValid)
-                    .addGap(18)
-                    .addComponent(btnAppuyerPourContinuer)
-                    .addContainerGap(16, Short.MAX_VALUE))
+                    .addGap(87)
+                    .addComponent(btnAppuyerPourContinuer, GroupLayout.PREFERRED_SIZE, 81, GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(147, Short.MAX_VALUE))
         );
         frmPaiementValid.getContentPane().setLayout(groupLayout);
     }
