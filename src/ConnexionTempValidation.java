@@ -77,7 +77,7 @@ public class ConnexionTempValidation
                     .addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
                         .addComponent(panel, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 564, Short.MAX_VALUE)
                         .addComponent(CxTempValidationPanelBouton, GroupLayout.PREFERRED_SIZE, 564, GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btnAide, GroupLayout.PREFERRED_SIZE, 74, GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnAide, GroupLayout.PREFERRED_SIZE, 76, GroupLayout.PREFERRED_SIZE))
                     .addContainerGap())
         );
         groupLayout.setVerticalGroup(
@@ -87,7 +87,7 @@ public class ConnexionTempValidation
                     .addComponent(btnAide, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE)
                     .addGap(18)
                     .addComponent(panel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(ComponentPlacement.RELATED, 153, Short.MAX_VALUE)
+                    .addPreferredGap(ComponentPlacement.RELATED, 150, Short.MAX_VALUE)
                     .addComponent(CxTempValidationPanelBouton, GroupLayout.PREFERRED_SIZE, 95, GroupLayout.PREFERRED_SIZE)
                     .addContainerGap())
         );

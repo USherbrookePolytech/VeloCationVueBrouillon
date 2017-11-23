@@ -80,11 +80,11 @@ public class ConnexionTempNum
                             .addContainerGap()
                             .addComponent(CxTempPanelSaisie, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGroup(groupLayout.createSequentialGroup()
-                            .addGap(500)
-                            .addComponent(btnAide, GroupLayout.PREFERRED_SIZE, 74, GroupLayout.PREFERRED_SIZE))
-                        .addGroup(groupLayout.createSequentialGroup()
                             .addContainerGap()
-                            .addComponent(CxTempPanelBouton, GroupLayout.DEFAULT_SIZE, 564, Short.MAX_VALUE)))
+                            .addComponent(CxTempPanelBouton, GroupLayout.DEFAULT_SIZE, 564, Short.MAX_VALUE))
+                        .addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
+                            .addContainerGap(498, Short.MAX_VALUE)
+                            .addComponent(btnAide, GroupLayout.PREFERRED_SIZE, 76, GroupLayout.PREFERRED_SIZE)))
                     .addContainerGap())
         );
         groupLayout.setVerticalGroup(
