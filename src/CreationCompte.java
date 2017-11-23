@@ -64,7 +64,7 @@ public class CreationCompte
         frmInscription = new JFrame();
         frmInscription.setResizable(false);
         frmInscription.setTitle("Inscription");
-        frmInscription.setBounds(100, 100, 450, 450);
+        frmInscription.setBounds(0, 0, 600, 500);
         frmInscription.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frmInscription.setLocationRelativeTo(null);
 
@@ -76,68 +76,73 @@ public class CreationCompte
         CreationPanelAdresse.setBorder(
                 new TitledBorder(null, "Votre adresse principale", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 
-        JButton CreationBtnReinitialiser = new JButton("Réinitialiser");
-        CreationBtnReinitialiser.addActionListener(new ActionListener()
-        {
-            public void actionPerformed(ActionEvent arg0)
-            {
-            }
-        });
-
-        JButton CreationBtnValider = new JButton("Valider");
-        CreationBtnValider.addActionListener(new ActionListener()
-        {
-            public void actionPerformed(ActionEvent arg0)
-            {
-            }
-        });
-
         JButton CreationBtnRetour = new JButton("Retour");
         CreationBtnRetour.addActionListener(new ActionListener()
         {
             public void actionPerformed(ActionEvent arg0)
             {
+                frmInscription.setVisible(false);
+                accueilView.getFrmAccueil().setVisible(true);
+                inscriptionController.hideMessage();
+                inscriptionController.resetValeur();
+                inscriptionController.setEmptyBorder();
             }
         });
 
         JLabel lblChampObligatoire = new JLabel("<html><font color='red'>* Champs obligatoires</font></html>");
+        
+        JButton CreationBtnReinitialiser = new JButton("Réinitialiser");
+        CreationBtnReinitialiser.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent arg0)
+            {
+                inscriptionController.resetValeur();
+            }
+            
+        });
+        
+        JButton CreationBtnValider = new JButton("Valider");
+        CreationBtnValider.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e){
+                frmInscription.setVisible(false);
+                frmAbonnement.setVisible(true);
+            }
+        });
         GroupLayout groupLayout = new GroupLayout(frmInscription.getContentPane());
         groupLayout.setHorizontalGroup(
             groupLayout.createParallelGroup(Alignment.LEADING)
                 .addGroup(groupLayout.createSequentialGroup()
-                    .addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-                        .addGroup(groupLayout.createSequentialGroup()
-                            .addGap(88)
-                            .addComponent(CreationBtnRetour)
-                            .addGap(18)
-                            .addComponent(CreationBtnReinitialiser)
-                            .addGap(18)
-                            .addComponent(CreationBtnValider))
-                        .addGroup(groupLayout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(lblChampObligatoire))
-                        .addGroup(groupLayout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(CreationPanelVous, GroupLayout.PREFERRED_SIZE, 414, GroupLayout.PREFERRED_SIZE))
-                        .addGroup(groupLayout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(CreationPanelAdresse, GroupLayout.PREFERRED_SIZE, 414, GroupLayout.PREFERRED_SIZE)))
-                    .addContainerGap(20, Short.MAX_VALUE))
+                    .addContainerGap(94, Short.MAX_VALUE)
+                    .addGroup(groupLayout.createParallelGroup(Alignment.LEADING, false)
+                        .addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
+                            .addComponent(CreationBtnReinitialiser, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(CreationBtnRetour, GroupLayout.PREFERRED_SIZE, 98, GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(ComponentPlacement.UNRELATED)
+                            .addComponent(CreationBtnValider, GroupLayout.PREFERRED_SIZE, 98, GroupLayout.PREFERRED_SIZE)
+                            .addGap(92))
+                        .addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
+                            .addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+                                .addComponent(lblChampObligatoire)
+                                .addComponent(CreationPanelAdresse, GroupLayout.PREFERRED_SIZE, 414, GroupLayout.PREFERRED_SIZE))
+                            .addGap(74))
+                        .addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
+                            .addComponent(CreationPanelVous, GroupLayout.PREFERRED_SIZE, 414, GroupLayout.PREFERRED_SIZE)
+                            .addGap(86))))
         );
         groupLayout.setVerticalGroup(
             groupLayout.createParallelGroup(Alignment.TRAILING)
                 .addGroup(groupLayout.createSequentialGroup()
                     .addGap(16)
                     .addComponent(CreationPanelVous, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(ComponentPlacement.UNRELATED)
+                    .addPreferredGap(ComponentPlacement.RELATED)
                     .addComponent(CreationPanelAdresse, GroupLayout.PREFERRED_SIZE, 130, GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
-                    .addComponent(lblChampObligatoire)
                     .addGap(18)
+                    .addComponent(lblChampObligatoire)
+                    .addPreferredGap(ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                     .addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
-                        .addComponent(CreationBtnReinitialiser)
-                        .addComponent(CreationBtnValider)
-                        .addComponent(CreationBtnRetour))
+                        .addComponent(CreationBtnReinitialiser, GroupLayout.PREFERRED_SIZE, 45, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(CreationBtnValider, GroupLayout.PREFERRED_SIZE, 45, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(CreationBtnRetour, GroupLayout.PREFERRED_SIZE, 45, GroupLayout.PREFERRED_SIZE))
                     .addGap(15))
         );
 
