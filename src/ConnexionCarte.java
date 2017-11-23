@@ -183,7 +183,7 @@ public class ConnexionCarte
         CxCarteTxtId.setFont(new Font("Tahoma", Font.PLAIN, 14));
         CxCarteTxtId.setColumns(10);
         
-        JLabel CxCarteLblVotreId = new JLabel("Votre numéro client :");
+        JLabel CxCarteLblVotreId = new JLabel("Votre identifiant :");
         CxCarteLblVotreId.setFont(new Font("Tahoma", Font.BOLD, 14));
         
         JLabel lblSaisirVotreIdentifiant = new JLabel("Saisir votre identifiant");
@@ -196,11 +196,11 @@ public class ConnexionCarte
                     .addComponent(lblSaisirVotreIdentifiant)
                     .addContainerGap(174, Short.MAX_VALUE))
                 .addGroup(gl_CxCartePanelId.createSequentialGroup()
-                    .addContainerGap(102, Short.MAX_VALUE)
+                    .addContainerGap(115, Short.MAX_VALUE)
                     .addComponent(CxCarteLblVotreId)
                     .addPreferredGap(ComponentPlacement.UNRELATED)
                     .addComponent(CxCarteTxtId, GroupLayout.PREFERRED_SIZE, 180, GroupLayout.PREFERRED_SIZE)
-                    .addGap(98))
+                    .addGap(110))
         );
         gl_CxCartePanelId.setVerticalGroup(
             gl_CxCartePanelId.createParallelGroup(Alignment.LEADING)
@@ -211,7 +211,7 @@ public class ConnexionCarte
                     .addGroup(gl_CxCartePanelId.createParallelGroup(Alignment.BASELINE)
                         .addComponent(CxCarteLblVotreId)
                         .addComponent(CxCarteTxtId, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE))
-                    .addContainerGap(90, Short.MAX_VALUE))
+                    .addContainerGap(35, Short.MAX_VALUE))
         );
         CxCartePanelId.setLayout(gl_CxCartePanelId);
         CxCartePanel.setLayout(gl_CxCartePanel);
